@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل إقامتك في المدينة المنورة - وايت دايموند بلازا</title>
+    <meta name="description" content="دليل شامل لإقامتك في المدينة المنورة مع وايت دايموند بلازا - اكتشف المعالم السياحية والأماكن المهمة">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- CSS moved inline to avoid affecting other pages -->
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #1E222D, #2C2F3A);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .city-guide-header {
+            background: linear-gradient(135deg, #C8A87C, #8C6B46);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .city-guide-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('assets/imgs/masjid-nabawi-3639064.jpg') center/cover;
+            opacity: 0.3;
+            z-index: 1;
+        }
+        
+        .city-guide-header .content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .city-guide-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .city-guide-header p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .back-button {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .back-button:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .guide-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .guide-section {
+            background:linear-gradient(135deg, #8C6B46, #C8A87C);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .guide-section h2 {
+            color: #ffffff;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #C8A87C;
+            padding-bottom: 10px;
+        }
+        
+        .landmarks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .landmark-card {
+            background: linear-gradient(135deg, #1E222D, #2C2F3A);
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+            border: 1px solid #272b39;
+        }
+        
+        .landmark-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .landmark-card h3 {
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .landmark-card .distance {
+            color: #ffffff;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .landmark-card .description {
+            color: #ffffff;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .directions-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #C8A87C, #8C6B46);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .directions-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(140, 107, 70, 0.3);
+        }
+        
+        .services-section {
+            background: linear-gradient(135deg, #f8f8f8, #e8e8e8);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .service-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .service-item .icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .service-item h3 {
+            color: #8C6B46;
+            margin-bottom: 10px;
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, #8C6B46, #C8A87C);
+            color: white;
+            text-align: center;
+        }
+        
+        .contact-section h2 {
+            color: white;
+            border-bottom: 3px solid rgba(255,255,255,0.3);
+        }
+        
+        .contact-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .contact-btn {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .contact-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .city-guide-header {
+                padding: 40px 15px;
+            }
+            
+            .city-guide-header h1 {
+                font-size: 2rem;
+            }
+            
+            .city-guide-header p {
+                font-size: 1rem;
+            }
+            
+            .guide-container {
+                padding: 20px 15px;
+            }
+            
+            .guide-section {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            
+            .landmarks-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .landmark-card {
+                padding: 15px;
+            }
+            
+            .service-item {
+                padding: 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .city-guide-header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .city-guide-header p {
+                font-size: 0.9rem;
+            }
+            
+            .back-button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .guide-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .landmark-card h3 {
+                font-size: 1.1rem;
+            }
+            
+            .directions-btn {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+        }
+        
+        /* Filter and Search Styles */
+        .filter-container {
+            background:linear-gradient(135deg, #8C6B46, #C8A87C);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+        
+        .filter-btn {
+            background: #e9ecef;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #495057;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        
+        .filter-btn:hover {
+            background: #dee2e6;
+            transform: translateY(-2px);
+        }
+        
+        .filter-btn.active {
+            background: linear-gradient(135deg, #8C6B46, #C8A87C);
+            color: white;
+            box-shadow: 0 4px 15px rgba(140, 107, 70, 0.3);
+        }
+        
+        .search-container {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .search-input {
+            flex: 1;
+            max-width: 400px;
+            padding: 12px 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 25px;
+            font-size: 1rem;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #C8A87C;
+            box-shadow: 0 0 0 3px rgba(200, 168, 124, 0.1);
+        }
+        
+        .clear-btn {
+            background:linear-gradient(135deg, #8C6B46, #C8A87C);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .clear-btn:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+        
+        /* Hide sections by default */
+        .guide-section {
+            display: none;
+        }
+        
+        .guide-section.active {
+            display: block;
+        }
+        
+        /* Search highlight */
+        .search-highlight {
+            background: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        
+        /* Print Styles */
+        @media print {
+            .city-guide-header {
+                background: #8C6B46 !important;
+                color: white !important;
+            }
+            
+            .landmark-card, .service-item {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            .filter-container {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="city-guide-header">
+        <div class="content">
+            <h1>دليل إقامتك في المدينة المنورة</h1>
+            <p>اكتشف المعالم القريبة من وايت دايموند بلازا</p>
+            <a href="index.html" class="back-button">← العودة للصفحة الرئيسية</a>
+        </div>
+    </header>
+
+    <div class="guide-container">
+        <!-- موقع البداية -->
+        <section class="guide-section" style="background: linear-gradient(135deg, #1E222D, #2C2F3A); color: white; text-align: center;">
+            <h2>📍 موقع البداية - وايت دايموند بلازا</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 20px;">جميع الاتجاهات محسوبة من موقع وايت دايموند بلازا في حي بني حارثة</p>
+            <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                <h3 style="color: #C8A87C; margin-bottom: 15px;">🏢 وايت دايموند بلازا</h3>
+                <p style="margin-bottom: 10px;"><strong>الموقع:</strong> حي بني حارثة، DMAC5317، 5317 ابراهيم بن خارط، 8241, Madinah 42313</p>
+                <p style="margin-bottom: 15px;"><strong>المسافة من الحرم النبوي:</strong> 9 كم (12 دقيقة بالسيارة)</p>
+                <a href="https://www.google.com/maps/place/وايت+ديموند+بلازا/@24.4889571,39.6315661,998m/data=!3m2!1e3!4b1!4m6!3m5!1s0x15bdbf003075fe75:0xcede7c75f9586645!8m2!3d24.4889522!4d39.634141!16s%2Fg%2F11x0kvjmf8" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #C8A87C, #8C6B46); color: white; padding: 12px 24px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">📍 عرض الموقع على الخريطة</a>
+            </div>
+        </section>
+
+        <!-- Filter Navigation -->
+        <div class="filter-container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="religious">🕌 سياحة دينية</button>
+                <button class="filter-btn" data-filter="universities">🎓 جامعات</button>
+                <button class="filter-btn" data-filter="malls">🛍️ مولات</button>
+                <button class="filter-btn" data-filter="restaurants">🍴 مطاعم</button>
+                <button class="filter-btn" data-filter="hospitals">🏥 مستشفيات</button>
+                <button class="filter-btn" data-filter="transport">🚉 النقل</button>
+                <button class="filter-btn" data-filter="entertainment">🎢 ترفيه</button>
+            </div>
+            <div class="search-container">
+                <button class="clear-btn">مسح</button>
+                <input type="text" class="search-input" placeholder="ابحث باسم المكان..." id="searchInput">
+            </div>
+        </div>
+
+        <!-- المعالم الدينية -->
+        <section class="guide-section" data-category="religious">
+            <h2>🕌 المعالم الدينية المهمة</h2>
+            <div class="landmarks-grid">
+                <div class="landmark-card" id="landmark-المسجد النبوي الشريف">
+                    <h3>المسجد النبوي الشريف</h3>
+                    <div class="distance">9 كم - 12 دقيقة</div>
+                    <div class="description">أهم مسجد في الإسلام بعد المسجد الحرام، وثاني الحرمين الشريفين</div>
+                    <a href="https://www.google.com/maps/dir/وايت+ديموند+بلازا+حي+بني+حارثة+DMAC5317+5317+ابراهيم+بن+خارط+8241+Madinah+42313+Saudi+Arabia/المسجد+النبوي+المدينة+المنورة" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card" id="landmark-مسجد قباء">
+                    <h3>مسجد قباء</h3>
+                    <div class="distance">8 كم - 11 دقيقة</div>
+                    <div class="description">أول مسجد بني في الإسلام، من المساجد التي يُستحب زيارتها</div>
+                    <a href="https://www.google.com/maps/dir/وايت+ديموند+بلازا+حي+بني+حارثة+DMAC5317+5317+ابراهيم+بن+خارط+8241+Madinah+42313+Saudi+Arabia/مسجد+قباء+المدينة+المنورة" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card" id="landmark-مسجد القبلتين">
+                    <h3>مسجد القبلتين</h3>
+                    <div class="distance">7 كم - 10 دقائق</div>
+                    <div class="description">المسجد الذي غُيّرت فيه القبلة من بيت المقدس إلى الكعبة</div>
+                    <a href="https://www.google.com/maps/dir/وايت+ديموند+بلازا+حي+بني+حارثة+DMAC5317+5317+ابراهيم+بن+خارط+8241+Madinah+42313+Saudi+Arabia/مسجد+القبلتين+المدينة+المنورة" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card" id="landmark-المساجد السبع">
+                    <h3>المساجد السبع</h3>
+                    <div class="distance">8 كم - 11 دقيقة</div>
+                    <div class="description">مجموعة من المساجد التاريخية المرتبطة بغزوة الخندق</div>
+                    <a href="https://www.google.com/maps/dir/وايت+ديموند+بلازا+حي+بني+حارثة+DMAC5317+5317+ابراهيم+بن+خارط+8241+Madinah+42313+Saudi+Arabia/المساجد+السبع+المدينة+المنورة" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card" id="landmark-مسجد الأنصار">
+                    <h3>مسجد الأنصار</h3>
+                    <div class="distance">500 متر - 1 دقيقة</div>
+                    <div class="description">أقرب مسجد لوايت دايموند بلازا، مناسب للصلاة اليومية</div>
+                    <a href="https://www.google.com/maps/dir/وايت+ديموند+بلازا+حي+بني+حارثة+DMAC5317+5317+ابراهيم+بن+خارط+8241+Madinah+42313+Saudi+Arabia/مسجد+الأنصار+المدينة+المنورة" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card" id="landmark-أبو بكر العمودي">
+                    <h3>أبو بكر العمودي</h3>
+                    <div class="distance">4 كم - 8 دقائق</div>
+                    <div class="description">من المعالم الدينية المهمة في المدينة المنورة</div>
+                    <a href="https://www.google.com/maps/dir/وايت+ديموند+بلازا+حي+بني+حارثة+DMAC5317+5317+ابراهيم+بن+خارط+8241+Madinah+42313+Saudi+Arabia/أبو+بكر+العمودي+المدينة+المنورة" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card" id="landmark-مسجد سيد الشهداء">
+                    <h3>مسجد سيد الشهداء</h3>
+                    <div class="distance">3 كم - 6 دقائق</div>
+                    <div class="description">مسجد يقع بالقرب من جبل أحد، مرتبط بغزوة أحد</div>
+                    <a href="https://www.google.com/maps/dir/وايت+ديموند+بلازا+حي+بني+حارثة+DMAC5317+5317+ابراهيم+بن+خارط+8241+Madinah+42313+Saudi+Arabia/مسجد+سيد+الشهداء+المدينة+المنورة" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>مسجد الميقات</h3>
+                    <div class="distance">14 كم - 18 دقيقة</div>
+                    <div class="description">ميقات أهل المدينة المنورة للحج والعمرة</div>
+                    <a href="https://www.google.com/maps/dir/وايت+ديموند+بلازا+حي+بني+حارثة+DMAC5317+5317+ابراهيم+بن+خارط+8241+Madinah+42313+Saudi+Arabia/مسجد+الميقات+المدينة+المنورة" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- المعالم التاريخية -->
+        <section class="guide-section" data-category="religious">
+            <h2>🏛️ المعالم التاريخية والسياحية</h2>
+            <div class="landmarks-grid">
+                <div class="landmark-card" id="landmark-جبل أحد">
+                    <h3>جبل أحد</h3>
+                    <div class="distance">6 كم - 15 دقيقة</div>
+                    <div class="description">الجبل الذي شهد غزوة أحد، من الأماكن المقدسة في المدينة</div>
+                    <a href="https://www.google.com/maps/dir/وايت+ديموند+بلازا+حي+بني+حارثة+DMAC5317+5317+ابراهيم+بن+خارط+8241+Madinah+42313+Saudi+Arabia/جبل+أحد+المدينة+المنورة" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>متحف دار المدينة</h3>
+                    <div class="distance">10 كم - 13 دقيقة</div>
+                    <div class="description">متحف يعرض تاريخ المدينة المنورة وتطورها عبر العصور</div>
+                    <a href="https://www.google.com/maps/dir/وايت+ديموند+بلازا+حي+بني+حارثة+DMAC5317+5317+ابراهيم+بن+خارط+8241+Madinah+42313+Saudi+Arabia/متحف+دار+المدينة+المدينة+المنورة" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card" id="landmark-المعرض والمتحف الدولي للسيرة النبوية">
+                    <h3>المعرض والمتحف الدولي للسيرة النبوية</h3>
+                    <div class="distance">8 كم - 14 دقيقة</div>
+                    <div class="description">متحف متخصص في السيرة النبوية والحضارة الإسلامية</div>
+                    <a href="https://www.google.com/maps/dir/وايت+ديموند+بلازا+حي+بني+حارثة+DMAC5317+5317+ابراهيم+بن+خارط+8241+Madinah+42313+Saudi+Arabia/المعرض+و+المتحف+الدولي+للسيرة+النبوية+و+الحضارات+المدينة+المنورة" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>متحف قصة الخلق</h3>
+                    <div class="distance">7 كم - 12 دقيقة</div>
+                    <div class="description">متحف يعرض قصة الخلق من منظور إسلامي</div>
+                    <a href="https://www.google.com/maps/dir/وايت+ديموند+بلازا+حي+بني+حارثة+DMAC5317+5317+ابراهيم+بن+خارط+8241+Madinah+42313+Saudi+Arabia/متحف+قصة+الخلق+المدينة+المنورة" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>مجمع الملك فهد لطباعة المصحف الشريف</h3>
+                    <div class="distance">12 كم - 14 دقيقة</div>
+                    <div class="description">أكبر مطبعة للمصحف الشريف في العالم</div>
+                    <a href="https://www.google.com/maps/dir/وايت+ديموند+بلازا+حي+بني+حارثة+DMAC5317+5317+ابراهيم+بن+خارط+8241+Madinah+42313+Saudi+Arabia/مجمع+الملك+فهد+لطباعة+المصحف+الشريف+المدينة+المنورة" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- الجامعات والكليات -->
+        <section class="guide-section" data-category="universities">
+            <h2>🎓 الجامعات والكليات</h2>
+            <div class="landmarks-grid">
+                <div class="landmark-card">
+                    <h3>الجامعة الإسلامية بالمدينة المنورة</h3>
+                    <div class="distance">9 كم - 14 دقيقة</div>
+                    <div class="description">أشهر الجامعات الإسلامية في العالم، تخصص في العلوم الشرعية</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>جامعة طيبة</h3>
+                    <div class="distance">11 كم - 14 دقيقة</div>
+                    <div class="description">جامعة حكومية شاملة تقدم برامج أكاديمية متنوعة</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>جامعة الأمير مقرن</h3>
+                    <div class="distance">10 كم - 12 دقيقة</div>
+                    <div class="description">جامعة حديثة تقدم برامج تقنية ومهنية</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>الكلية التقنية</h3>
+                    <div class="distance">11 كم - 15 دقيقة</div>
+                    <div class="description">تخصص في البرامج التقنية والمهنية</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>كلية الحديث الشريف</h3>
+                    <div class="distance">9 كم - 15 دقيقة</div>
+                    <div class="description">تخصص في علوم الحديث النبوي الشريف</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>الكلية التقنية للبنات</h3>
+                    <div class="distance">12 كم - 16 دقيقة</div>
+                    <div class="description">كلية تقنية متخصصة للبنات تقدم برامج تقنية ومهنية</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>كلية الريان الأهلية</h3>
+                    <div class="distance">8 كم - 12 دقيقة</div>
+                    <div class="description">كلية أهلية تقدم برامج أكاديمية متنوعة</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>الجامعة العربية المفتوحة</h3>
+                    <div class="distance">17 كم - 17 دقيقة</div>
+                    <div class="description">جامعة تعليم مفتوح تقدم برامج مرنة</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- المولات والمراكز التجارية -->
+        <section class="guide-section" data-category="malls">
+            <h2>🛍️ المولات والمراكز التجارية</h2>
+            <div class="landmarks-grid">
+                <div class="landmark-card">
+                    <h3>الرشيد ميجا مول</h3>
+                    <div class="distance">6 كم - 9 دقائق</div>
+                    <div class="description">أكبر مول في المدينة المنورة، يحتوي على متاجر متنوعة</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>الحسن مول</h3>
+                    <div class="distance">2 كم - 5 دقائق</div>
+                    <div class="description">مول حديث يحتوي على متاجر ومطاعم</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>الروضة بلازا</h3>
+                    <div class="distance">800 متر - 2 دقيقة</div>
+                    <div class="description">أقرب مركز تجاري لوايت دايموند بلازا</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>مجمع القارات</h3>
+                    <div class="distance">3 كم - 6 دقائق</div>
+                    <div class="description">مجمع تجاري حديث يحتوي على متاجر ومطاعم متنوعة</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>النور مول</h3>
+                    <div class="distance">5 كم - 10 دقائق</div>
+                    <div class="description">مول يحتوي على متاجر ومطاعم متنوعة</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>المنار مول</h3>
+                    <div class="distance">8 كم - 12 دقيقة</div>
+                    <div class="description">مول حديث مع متاجر ومطاعم</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>سوق المدينة الدولي</h3>
+                    <div class="distance">5 كم - 9 دقائق</div>
+                    <div class="description">سوق شعبي يحتوي على منتجات محلية ومستوردة</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- المطاعم -->
+        <section class="guide-section" data-category="restaurants">
+            <h2>🍴 المطاعم والمقاهي</h2>
+            <div class="landmarks-grid">
+                <div class="landmark-card">
+                    <h3>مطعم مستر بروست</h3>
+                    <div class="distance">300 متر - 1 دقيقة</div>
+                    <div class="description">أقرب مطعم لوايت دايموند بلازا، متخصص في البروستد</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>هيرفي</h3>
+                    <div class="distance">1.5 كم - 2 دقيقة</div>
+                    <div class="description">سلسلة مطاعم برجر شهيرة</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>ريف العرب</h3>
+                    <div class="distance">2.5 كم - 4 دقائق</div>
+                    <div class="description">مطعم متخصص في المأكولات العربية</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>ال هنا</h3>
+                    <div class="distance">1.5 كم - 2 دقيقة</div>
+                    <div class="description">مقهى ومطعم للقهوة والمشروبات</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>كايرو</h3>
+                    <div class="distance">1.5 كم - 3 دقائق</div>
+                    <div class="description">مطعم متخصص في المأكولات المصرية</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>كوكوروكو</h3>
+                    <div class="distance">2 كم - 3 دقائق</div>
+                    <div class="description">مطعم متخصص في المأكولات اليابانية والآسيوية</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>بوخارست البخاري</h3>
+                    <div class="distance">800 متر - 1 دقيقة</div>
+                    <div class="description">مطعم متخصص في المأكولات البخارية</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- المستشفيات والمراكز الطبية -->
+        <section class="guide-section" data-category="hospitals">
+            <h2>🏥 المستشفيات والمراكز الطبية</h2>
+            <div class="landmarks-grid">
+                <div class="landmark-card">
+                    <h3>مجمع المدينة الطبي</h3>
+                    <div class="distance">1.5 كم - 4 دقائق</div>
+                    <div class="description">مجمع طبي شامل مع جراحات اليوم الواحد</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>مستشفى الحرم</h3>
+                    <div class="distance">5 كم - 8 دقائق</div>
+                    <div class="description">مستشفى حكومي كبير بالقرب من الحرم النبوي</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>مستشفى الظهراء</h3>
+                    <div class="distance">5 كم - 9 دقائق</div>
+                    <div class="description">مستشفى متخصص في طب النساء والولادة</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>مركز صحي الأوس</h3>
+                    <div class="distance">1.5 كم - 2 دقيقة</div>
+                    <div class="description">مركز صحي حكومي للرعاية الأولية</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>مستشفى المدينة المنورة العام</h3>
+                    <div class="distance">6 كم - 12 دقيقة</div>
+                    <div class="description">مستشفى حكومي عام يقدم خدمات طبية شاملة</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>مركز عبير الطبي</h3>
+                    <div class="distance">5 كم - 8 دقائق</div>
+                    <div class="description">مركز طبي خاص يقدم خدمات متخصصة</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>مجمع صفا المدينة الطبي</h3>
+                    <div class="distance">3 كم - 6 دقائق</div>
+                    <div class="description">مجمع طبي متخصص يقدم خدمات طبية شاملة</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>مجمع الطبيب الطبي</h3>
+                    <div class="distance">4 كم - 7 دقائق</div>
+                    <div class="description">مجمع طبي متخصص يقدم خدمات طبية متقدمة</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- النقل والمواصلات -->
+        <section class="guide-section" data-category="transport">
+            <h2>🚉 النقل والمواصلات</h2>
+            <div class="landmarks-grid">
+                <div class="landmark-card">
+                    <h3>مطار الأمير محمد بن عبد العزيز</h3>
+                    <div class="distance">13 كم - 15 دقيقة</div>
+                    <div class="description">المطار الدولي للمدينة المنورة</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>محطة قطار الحرمين</h3>
+                    <div class="distance">8 كم - 12 دقيقة</div>
+                    <div class="description">محطة القطار السريع بين مكة والمدينة</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>محطة الحافلات الرئيسية</h3>
+                    <div class="distance">7 كم - 10 دقائق</div>
+                    <div class="description">محطة حافلات النقل العام</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>موقف سيارات الأجرة</h3>
+                    <div class="distance">400 متر - 1 دقيقة</div>
+                    <div class="description">أقرب موقف لسيارات الأجرة</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- الترفيه والأنشطة -->
+        <section class="guide-section" data-category="entertainment">
+            <h2>🎢 الترفيه والأنشطة</h2>
+            <div class="landmarks-grid">
+                <div class="landmark-card">
+                    <h3>بوليفارد المدينة</h3>
+                    <div class="distance">4 كم - 7 دقائق</div>
+                    <div class="description">منطقة ترفيهية حديثة مع مطاعم ومقاهي ومحلات تجارية</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>منتزه أحد</h3>
+                    <div class="distance">6 كم - 12 دقيقة</div>
+                    <div class="description">منتزه تاريخي يقع بالقرب من جبل أحد</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>بوليفارد قباء</h3>
+                    <div class="distance">8 كم - 15 دقيقة</div>
+                    <div class="description">منطقة ترفيهية حديثة في قباء مع مرافق متعددة</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>بوليفارد المحمدية</h3>
+                    <div class="distance">5 كم - 9 دقائق</div>
+                    <div class="description">منطقة ترفيهية وتجارية حديثة</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>منتزه البيضاء</h3>
+                    <div class="distance">3 كم - 6 دقائق</div>
+                    <div class="description">منتزه عائلي مع ألعاب ومرافق ترفيهية</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>محمية الأوسية</h3>
+                    <div class="distance">12 كم - 18 دقيقة</div>
+                    <div class="description">محمية طبيعية مع مساحات خضراء ومرافق ترفيهية</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>منزه ريف البستان</h3>
+                    <div class="distance">9 كم - 14 دقيقة</div>
+                    <div class="description">منتزه طبيعي مع مساحات خضراء واسعة</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>حديقة الملك فهد</h3>
+                    <div class="distance">7 كم - 10 دقائق</div>
+                    <div class="description">أكبر حديقة في المدينة المنورة مع مساحات خضراء واسعة</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>وادي العقيق</h3>
+                    <div class="distance">10 كم - 16 دقيقة</div>
+                    <div class="description">وادي طبيعي جميل مع مساحات خضراء</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>محمية أويا</h3>
+                    <div class="distance">15 كم - 22 دقيقة</div>
+                    <div class="description">محمية طبيعية مع مساحات خضراء ومرافق ترفيهية</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>حديقة الأسواف</h3>
+                    <div class="distance">6 كم - 11 دقيقة</div>
+                    <div class="description">حديقة جميلة مع ألعاب للأطفال ومساحات للعائلات</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>حديقة النور</h3>
+                    <div class="distance">5 كم - 8 دقائق</div>
+                    <div class="description">حديقة جميلة مع ألعاب للأطفال ومساحات للعائلات</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>منتزه الأندلس</h3>
+                    <div class="distance">4 كم - 6 دقائق</div>
+                    <div class="description">منتزه عائلي مع ألعاب ومرافق ترفيهية</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>حديقة الشهداء</h3>
+                    <div class="distance">6 كم - 9 دقائق</div>
+                    <div class="description">حديقة تذكارية جميلة مع مساحات خضراء</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>نادي المدينة الرياضي</h3>
+                    <div class="distance">3 كم - 5 دقائق</div>
+                    <div class="description">نادي رياضي مع مرافق متعددة للرياضة واللياقة</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+                
+                <div class="landmark-card">
+                    <h3>مركز الملك عبد العزيز التاريخي</h3>
+                    <div class="distance">8 كم - 11 دقيقة</div>
+                    <div class="description">مركز ثقافي وتاريخي مع معارض ومكتبة</div>
+                    <a href="https://maps.app.goo.gl/LeqQ524UCwELzwQy7" target="_blank" class="directions-btn">الاتجاهات</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- خريطة تفاعلية -->
+        <section class="guide-section" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef);">
+            <h2>🗺️ خريطة تفاعلية للمعالم</h2>
+            <p style="text-align: center; margin-bottom: 20px; color: #6c757d;">انقر على أي معلم لعرضه على الخريطة</p>
+            <div style="text-align: center; margin: 20px 0;">
+                <a href="https://www.google.com/maps/place/وايت+ديموند+بلازا/@24.4889571,39.6315661,998m/data=!3m2!1e3!4b1!4m6!3m5!1s0x15bdbf003075fe75:0xcede7c75f9586645!8m2!3d24.4889522!4d39.634141!16s%2Fg%2F11x0kvjmf8" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #C8A87C, #8C6B46); color: white; padding: 15px 30px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(200, 168, 124, 0.3);">
+                    🗺️ فتح الخريطة التفاعلية
+                </a>
+            </div>
+        </section>
+
+        <!-- نصائح للإقامة -->
+        <section class="guide-section">
+            <h2>💡 نصائح مهمة لإقامتك</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                <div style="background: #f0f8ff; padding: 20px; border-radius: 10px; border-left: 4px solid #C8A87C;">
+                    <h3 style="color: #8C6B46; margin-bottom: 10px;">🕌 أوقات الصلاة</h3>
+                    <p>تأكد من معرفة أوقات الصلاة اليومية، خاصة صلاة الفجر والمغرب</p>
+                </div>
+                
+                <div style="background: #f0fff0; padding: 20px; border-radius: 10px; border-left: 4px solid #C8A87C;">
+                    <h3 style="color: #8C6B46; margin-bottom: 10px;">🚗 التنقل</h3>
+                    <p>استخدم التطبيقات الملاحية، وتجنب أوقات الذروة عند زيارة الحرم</p>
+                </div>
+                
+                <div style="background: #fff8f0; padding: 20px; border-radius: 10px; border-left: 4px solid #C8A87C;">
+                    <h3 style="color: #8C6B46; margin-bottom: 10px;">🌡️ الطقس</h3>
+                    <p>احرص على شرب الماء، واستخدم واقي الشمس في الأوقات الحارة</p>
+                </div>
+                
+                <div style="background: #f8f0ff; padding: 20px; border-radius: 10px; border-left: 4px solid #C8A87C;">
+                    <h3 style="color: #8C6B46; margin-bottom: 10px;">📱 التواصل</h3>
+                    <p>احتفظ بأرقام الطوارئ، وتأكد من شحن هاتفك قبل الخروج</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- معلومات إضافية مفيدة -->
+        <section class="guide-section" style="background: linear-gradient(135deg, #fff3cd, #ffeaa7);">
+            <h2>ℹ️ معلومات إضافية مفيدة</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+                <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <h3 style="color: #8C6B46; margin-bottom: 10px;">🕐 أوقات العمل</h3>
+                    <p><strong>المساجد:</strong> مفتوحة 24/7</p>
+                    <p><strong>المولات:</strong> 10 صباحاً - 12 منتصف الليل</p>
+                    <p><strong>المستشفيات:</strong> 24/7 للطوارئ</p>
+                </div>
+                
+                <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <h3 style="color: #8C6B46; margin-bottom: 10px;">🚗 وسائل النقل</h3>
+                    <p><strong>التاكسي:</strong> متوفر 24/7</p>
+                    <p><strong>أوبر/كريم:</strong> متوفر في المدينة</p>
+                    <p><strong>الحافلات:</strong> من 6 صباحاً - 10 مساءً</p>
+                </div>
+                
+                <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <h3 style="color: #8C6B46; margin-bottom: 10px;">🌡️ الطقس</h3>
+                    <p><strong>الصيف:</strong> حار وجاف (35-45°م)</p>
+                    <p><strong>الشتاء:</strong> معتدل (15-25°م)</p>
+                    <p><strong>نصيحة:</strong> اشرب الماء بانتظام</p>
+                </div>
+                
+                <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <h3 style="color: #8C6B46; margin-bottom: 10px;">📱 تطبيقات مفيدة</h3>
+                    <p><strong>خرائط جوجل:</strong> للتنقل</p>
+                    <p><strong>تطبيق الحرمين:</strong> لأوقات الصلاة</p>
+                    <p><strong>أوبر/كريم:</strong> للنقل</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- معلومات الاتصال -->
+        <section class="guide-section contact-section">
+            <h2>📞 تواصل معنا</h2>
+            <p>نحن هنا لمساعدتك في أي استفسار حول إقامتك في المدينة المنورة</p>
+            <div class="contact-buttons">
+                <a href="https://wa.me/966536855058" target="_blank" class="contact-btn">💬 واتساب</a>
+                <a href="tel:+966536855058" class="contact-btn">📞 اتصل بنا</a>
+                <a href="mailto:info@whitediamondplaza.com" class="contact-btn">📧 البريد الإلكتروني</a>
+            </div>
+        </section>
+    </div>
+
+    <footer style="background: #333; color: white; text-align: center; padding: 20px;">
+        <p>&copy; 2025 سواعد النجاح. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        // Function to create proper Google Maps directions links
+        function createDirectionsLink(destination) {
+            // Updated starting point: وايت ديموند بلازا - الموقع الصحيح
+            const baseUrl = 'https://www.google.com/maps/dir/وايت+ديموند+بلازا/@24.4889571,39.6315661,998m/data=!3m2!1e3!4b1!4m6!3m5!1s0x15bdbf003075fe75:0xcede7c75f9586645!8m2!3d24.4889522!4d39.634141!16s%2Fg%2F11x0kvjmf8/';
+            return baseUrl + encodeURIComponent(destination);
+        }
+        
+        // Update all direction links when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Update direction links for religious landmarks
+            const religiousLandmarks = {
+                'المسجد النبوي الشريف': 'المسجد+النبوي+المدينة+المنورة',
+                'مسجد قباء': 'مسجد+قباء+المدينة+المنورة',
+                'مسجد القبلتين': 'مسجد+القبلتين+المدينة+المنورة',
+                'المساجد السبع': 'المساجد+السبع+المدينة+المنورة',
+                'مسجد الأنصار': 'مسجد+الأنصار+المدينة+المنورة',
+                'أبو بكر العمودي': 'أبو+بكر+العمودي+المدينة+المنورة',
+                'مسجد سيد الشهداء': 'مسجد+سيد+الشهداء+المدينة+المنورة',
+                'مسجد الميقات': 'مسجد+الميقات+المدينة+المنورة'
+            };
+            
+            // Update direction links for historical landmarks
+            const historicalLandmarks = {
+                'جبل أحد': 'جبل+أحد+المدينة+المنورة',
+                'متحف دار المدينة': 'متحف+دار+المدينة+المدينة+المنورة',
+                'المعرض والمتحف الدولي للسيرة النبوية': 'المعرض+و+المتحف+الدولي+للسيرة+النبوية+و+الحضارات+المدينة+المنورة',
+                'متحف قصة الخلق': 'متحف+قصة+الخلق+المدينة+المنورة',
+                'مجمع الملك فهد لطباعة المصحف الشريف': 'مجمع+الملك+فهد+لطباعة+المصحف+الشريف+المدينة+المنورة'
+            };
+            
+            // Update direction links for universities
+            const universityLandmarks = {
+                'الجامعة الإسلامية بالمدينة المنورة': 'الجامعة+الإسلامية+المدينة+المنورة',
+                'جامعة طيبة': 'جامعة+طيبة+المدينة+المنورة',
+                'جامعة الأمير مقرن': 'جامعة+الأمير+مقرن+المدينة+المنورة',
+                'الكلية التقنية': 'الكلية+التقنية+المدينة+المنورة',
+                'كلية الحديث الشريف': 'كلية+الحديث+الشريف+المدينة+المنورة',
+                'الكلية التقنية للبنات': 'الكلية+التقنية+للبنات+المدينة+المنورة',
+                'كلية الريان الأهلية': 'كلية+الريان+الأهلية+المدينة+المنورة',
+                'الجامعة العربية المفتوحة': 'الجامعة+العربية+المفتوحة+المدينة+المنورة'
+            };
+            
+            // Update direction links for malls
+            const mallLandmarks = {
+                'الرشيد ميجا مول': 'الرشيد+ميجا+مول+المدينة+المنورة',
+                'الحسن مول': 'الحسن+مول+المدينة+المنورة',
+                'الروضة بلازا': 'الروضة+بلازا+المدينة+المنورة',
+                'مجمع القارات': 'مجمع+القارات+المدينة+المنورة',
+                'النور مول': 'النور+مول+المدينة+المنورة',
+                'المنار مول': 'المنار+مول+المدينة+المنورة',
+                'سوق المدينة الدولي': 'سوق+المدينة+الدولي+المدينة+المنورة'
+            };
+            
+            // Update direction links for restaurants
+            const restaurantLandmarks = {
+                'مطعم مستر بروست': 'مطعم+مستر+بروست+المدينة+المنورة',
+                'هيرفي': 'هيرفي+المدينة+المنورة',
+                'ريف العرب': 'ريف+العرب+المدينة+المنورة',
+                'ال هنا': 'ال+هنا+المدينة+المنورة',
+                'كايرو': 'كايرو+المدينة+المنورة',
+                'كوكوروكو': 'كوكوروكو+المدينة+المنورة',
+                'بوخارست البخاري': 'بوخارست+البخاري+المدينة+المنورة'
+            };
+            
+            // Update direction links for hospitals
+            const hospitalLandmarks = {
+                'مجمع المدينة الطبي': 'مجمع+المدينة+الطبي+المدينة+المنورة',
+                'مستشفى الحرم': 'مستشفى+الحرم+المدينة+المنورة',
+                'مستشفى الظهراء': 'مستشفى+الظهراء+المدينة+المنورة',
+                'مركز صحي الأوس': 'مركز+صحي+الأوس+المدينة+المنورة',
+                'مستشفى المدينة المنورة العام': 'مستشفى+المدينة+المنورة+العام',
+                'مركز عبير الطبي': 'مركز+عبير+الطبي+المدينة+المنورة',
+                'مجمع صفا المدينة الطبي': 'مجمع+صفا+المدينة+الطبي+المدينة+المنورة',
+                'مجمع الطبيب الطبي': 'مجمع+الطبيب+الطبي+المدينة+المنورة'
+            };
+            
+            // Update direction links for transport
+            const transportLandmarks = {
+                'مطار الأمير محمد بن عبد العزيز': 'مطار+الأمير+محمد+بن+عبد+العزيز+المدينة+المنورة',
+                'محطة قطار الحرمين': 'محطة+قطار+الحرمين+المدينة+المنورة',
+                'محطة الحافلات الرئيسية': 'محطة+الحافلات+المدينة+المنورة',
+                'موقف سيارات الأجرة': 'موقف+سيارات+الأجرة+المدينة+المنورة'
+            };
+            
+            // Update direction links for entertainment
+            const entertainmentLandmarks = {
+                'بوليفارد المدينة': 'بوليفارد+المدينة+المنورة',
+                'منتزه أحد': 'منتزه+أحد+المدينة+المنورة',
+                'بوليفارد قباء': 'بوليفارد+قباء+المدينة+المنورة',
+                'بوليفارد المحمدية': 'بوليفارد+المحمدية+المدينة+المنورة',
+                'منتزه البيضاء': 'منتزه+البيضاء+المدينة+المنورة',
+                'محمية الأوسية': 'محمية+الأوسية+المدينة+المنورة',
+                'منزه ريف البستان': 'منزه+ريف+البستان+المدينة+المنورة',
+                'حديقة الملك فهد': 'حديقة+الملك+فهد+المدينة+المنورة',
+                'وادي العقيق': 'وادي+العقيق+المدينة+المنورة',
+                'محمية أويا': 'محمية+أويا+المدينة+المنورة',
+                'حديقة الأسواف': 'حديقة+الأسواف+المدينة+المنورة',
+                'حديقة النور': 'حديقة+النور+المدينة+المنورة',
+                'منتزه الأندلس': 'منتزه+الأندلس+المدينة+المنورة',
+                'حديقة الشهداء': 'حديقة+الشهداء+المدينة+المنورة',
+                'نادي المدينة الرياضي': 'نادي+المدينة+الرياضي+المدينة+المنورة',
+                'مركز الملك عبد العزيز التاريخي': 'مركز+الملك+عبد+العزيز+التاريخي+المدينة+المنورة'
+            };
+            
+            // Function to update links for a specific landmark set
+            function updateLandmarkLinks(landmarks) {
+                Object.keys(landmarks).forEach(landmarkName => {
+                    const landmarkCards = document.querySelectorAll('.landmark-card');
+                    landmarkCards.forEach(card => {
+                        const title = card.querySelector('h3');
+                        if (title && title.textContent.trim() === landmarkName) {
+                            const link = card.querySelector('.directions-btn');
+                            if (link) {
+                                link.href = createDirectionsLink(landmarks[landmarkName]);
+                            }
+                        }
+                    });
+                });
+            }
+            
+            // Function to update all direction links with the new starting point
+            function updateAllDirectionLinks() {
+                const allDirectionLinks = document.querySelectorAll('.directions-btn');
+                allDirectionLinks.forEach(link => {
+                    // Check if the link contains the old starting point
+                    if (link.href.includes('White+Diamond+Plaza') || 
+                        link.href.includes('maps.app.goo.gl/LeqQ524UCwELzwQy7') ||
+                        link.href.includes('وايت+ديموند+بلازا+حي+بني+حارثة+DMAC5317')) {
+                        // Extract destination from current href or use a default
+                        const currentHref = link.href;
+                        let destination = '';
+                        
+                        if (currentHref.includes('المسجد+النبوي')) {
+                            destination = 'المسجد+النبوي+المدينة+المنورة';
+                        } else if (currentHref.includes('مسجد+قباء')) {
+                            destination = 'مسجد+قباء+المدينة+المنورة';
+                        } else if (currentHref.includes('مسجد+القبلتين')) {
+                            destination = 'مسجد+القبلتين+المدينة+المنورة';
+                        } else if (currentHref.includes('المساجد+السبع')) {
+                            destination = 'المساجد+السبع+المدينة+المنورة';
+                        } else if (currentHref.includes('مسجد+الأنصار')) {
+                            destination = 'مسجد+الأنصار+المدينة+المنورة';
+                        } else if (currentHref.includes('مسجد+الميقات')) {
+                            destination = 'مسجد+الميقات+المدينة+المنورة';
+                        } else if (currentHref.includes('جبل+أحد')) {
+                            destination = 'جبل+أحد+المدينة+المنورة';
+                        } else if (currentHref.includes('متحف+دار+المدينة')) {
+                            destination = 'متحف+دار+المدينة+المدينة+المنورة';
+                        } else if (currentHref.includes('المعرض+و+المتحف+الدولي')) {
+                            destination = 'المعرض+و+المتحف+الدولي+للسيرة+النبوية+و+الحضارات+المدينة+المنورة';
+                        } else {
+                            // For other landmarks, try to extract from the card title
+                            const card = link.closest('.landmark-card');
+                            if (card) {
+                                const title = card.querySelector('h3');
+                                if (title) {
+                                    const landmarkName = title.textContent.trim();
+                                    destination = landmarkName.replace(/\s+/g, '+') + '+المدينة+المنورة';
+                                }
+                            }
+                        }
+                        
+                        if (destination) {
+                            link.href = createDirectionsLink(destination);
+                        }
+                    }
+                });
+            }
+            
+            // Update all landmark links
+            updateLandmarkLinks(religiousLandmarks);
+            updateLandmarkLinks(historicalLandmarks);
+            updateLandmarkLinks(universityLandmarks);
+            updateLandmarkLinks(mallLandmarks);
+            updateLandmarkLinks(restaurantLandmarks);
+            updateLandmarkLinks(hospitalLandmarks);
+            updateLandmarkLinks(transportLandmarks);
+            updateLandmarkLinks(entertainmentLandmarks);
+            
+            // Update all remaining links with the new starting point
+            updateAllDirectionLinks();
+        });
+        
+        // Filter and Search Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const sections = document.querySelectorAll('.guide-section');
+            const searchInput = document.getElementById('searchInput');
+            const clearBtn = document.querySelector('.clear-btn');
+            
+            // Show religious section by default
+            showSection('religious');
+            
+            // Filter button functionality
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show/hide sections
+                    showSection(filter);
+                    
+                    // Clear search when switching filters
+                    searchInput.value = '';
+                    clearSearch();
+                });
+            });
+            
+            // Search functionality
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+                
+                if (searchTerm === '') {
+                    clearSearch();
+                    return;
+                }
+                
+                // Search in all sections
+                sections.forEach(section => {
+                    const cards = section.querySelectorAll('.landmark-card');
+                    let hasMatches = false;
+                    
+                    cards.forEach(card => {
+                        const title = card.querySelector('h3').textContent.toLowerCase();
+                        const description = card.querySelector('.description').textContent.toLowerCase();
+                        
+                        if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                            card.style.display = 'block';
+                            hasMatches = true;
+                            
+                            // Highlight search term
+                            highlightSearchTerm(card, searchTerm);
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                    
+                    // Show section if it has matches
+                    if (hasMatches) {
+                        section.style.display = 'block';
+                        section.classList.add('active');
+                    } else {
+                        section.style.display = 'none';
+                        section.classList.remove('active');
+                    }
+                });
+            });
+            
+            // Clear button functionality
+            clearBtn.addEventListener('click', function() {
+                searchInput.value = '';
+                clearSearch();
+                
+                // Show current active filter
+                const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+                showSection(activeFilter);
+            });
+            
+            function showSection(filter) {
+                sections.forEach(section => {
+                    if (section.getAttribute('data-category') === filter) {
+                        section.style.display = 'block';
+                        section.classList.add('active');
+                        
+                        // Show all cards in the section
+                        const cards = section.querySelectorAll('.landmark-card');
+                        cards.forEach(card => {
+                            card.style.display = 'block';
+                            removeHighlight(card);
+                        });
+                    } else {
+                        section.style.display = 'none';
+                        section.classList.remove('active');
+                    }
+                });
+            }
+            
+            function clearSearch() {
+                sections.forEach(section => {
+                    const cards = section.querySelectorAll('.landmark-card');
+                    cards.forEach(card => {
+                        card.style.display = 'block';
+                        removeHighlight(card);
+                    });
+                });
+            }
+            
+            function highlightSearchTerm(card, searchTerm) {
+                const title = card.querySelector('h3');
+                const description = card.querySelector('.description');
+                
+                // Remove existing highlights
+                removeHighlight(card);
+                
+                // Highlight in title
+                if (title.textContent.toLowerCase().includes(searchTerm)) {
+                    const regex = new RegExp(`(${searchTerm})`, 'gi');
+                    title.innerHTML = title.textContent.replace(regex, '<span class="search-highlight">$1</span>');
+                }
+                
+                // Highlight in description
+                if (description.textContent.toLowerCase().includes(searchTerm)) {
+                    const regex = new RegExp(`(${searchTerm})`, 'gi');
+                    description.innerHTML = description.textContent.replace(regex, '<span class="search-highlight">$1</span>');
+                }
+            }
+            
+            function removeHighlight(card) {
+                const highlights = card.querySelectorAll('.search-highlight');
+                highlights.forEach(highlight => {
+                    const parent = highlight.parentNode;
+                    parent.replaceChild(document.createTextNode(highlight.textContent), highlight);
+                    parent.normalize();
+                });
+            }
+            
+            // Smooth scrolling for better UX
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // ===== HANDLE DIRECT LANDMARK LINKS =====
+            // Handle direct links from index.html ticker
+            function handleDirectLandmarkLink() {
+                const hash = window.location.hash;
+                if (hash && hash.startsWith('#landmark-')) {
+                    const landmarkId = decodeURIComponent(hash.substring(1));
+                    const landmarkElement = document.getElementById(landmarkId);
+                    
+                    if (landmarkElement) {
+                        // Show the religious section first
+                        const religiousSection = document.querySelector('[data-category="religious"]');
+                        if (religiousSection) {
+                            // Hide all sections
+                            document.querySelectorAll('.guide-section').forEach(section => {
+                                section.classList.remove('active');
+                            });
+                            
+                            // Show religious section
+                            religiousSection.classList.add('active');
+                            
+                            // Update active filter button
+                            document.querySelectorAll('.filter-btn').forEach(btn => {
+                                btn.classList.remove('active');
+                            });
+                            document.querySelector('[data-filter="religious"]').classList.add('active');
+                        }
+                        
+                        // Scroll to the landmark with smooth animation
+                        setTimeout(() => {
+                            landmarkElement.scrollIntoView({ 
+                                behavior: 'smooth', 
+                                block: 'center' 
+                            });
+                            
+                            // Add highlight effect
+                            landmarkElement.style.transition = 'all 0.5s ease';
+                            landmarkElement.style.transform = 'scale(1.05)';
+                            landmarkElement.style.boxShadow = '0 8px 25px rgba(200, 168, 124, 0.6)';
+                            landmarkElement.style.border = '2px solid #C8A87C';
+                            
+                            // Remove highlight after 3 seconds
+                            setTimeout(() => {
+                                landmarkElement.style.transform = 'scale(1)';
+                                landmarkElement.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.1)';
+                                landmarkElement.style.border = 'none';
+                            }, 3000);
+                        }, 500);
+                    }
+                }
+            }
+            
+            // Call on page load
+            handleDirectLandmarkLink();
+            
+            // Handle hash changes (for navigation within the page)
+            window.addEventListener('hashchange', handleDirectLandmarkLink);
+        });
+    </script>
+</body>
+</html>

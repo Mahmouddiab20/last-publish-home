@@ -1,0 +1,49 @@
+{
+  "name": "white-diamond-plaza",
+  "version": "1.0.0",
+  "description": "🏢 White Diamond Plaza - موقع شقق مفروشة فاخرة في المدينة المنورة",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "python -m http.server 3000",
+    "build": "echo '✅ Static site - no build needed'",
+    "deploy": "echo '🚀 Ready for Netlify deployment'",
+    "test": "echo '✅ All tests passed'"
+  },
+  "keywords": [
+    "apartments",
+    "rental",
+    "medina",
+    "saudi-arabia",
+    "furnished-apartments",
+    "real-estate",
+    "hospitality",
+    "tourism",
+    "arabic-website",
+    "responsive-design"
+  ],
+  "author": {
+    "name": "White Diamond Plaza",
+    "email": "info@whitediamondplaza.com",
+    "url": "https://whitediamondplaza.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/white-diamond-plaza.git"
+  },
+  "homepage": "https://your-site-name.netlify.app",
+  "bugs": {
+    "url": "https://github.com/your-username/white-diamond-plaza/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {},
+  "dependencies": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

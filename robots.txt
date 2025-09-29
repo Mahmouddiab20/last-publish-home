@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://your-site-name.netlify.app/sitemap.xml
+
+# Disallow development files (removed)
+# Disallow: /server.py
+# Disallow: /start-server.bat
+Disallow: /.gitignore
+Disallow: /netlify.toml
+Disallow: /package.json
+Disallow: /README.md
+Disallow: /_headers
+Disallow: /_redirects

@@ -1,0 +1,4317 @@
+/* WhatsApp Pulse Animation for Desktop */
+@keyframes whatsapp-pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 20px rgba(57, 199, 75, 0.4);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 4px 20px rgba(57, 199, 75, 0.6), 0 0 0 10px rgba(57, 199, 75, 0.1);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 20px rgba(57, 199, 75, 0.4);
+    }
+}
+
+/* Desktop Styles - للشاشات الأكبر من 768px */
+
+
+/* ===== DESKTOP PHOTO GALLERY SECTION ===== */
+/* تطبيق نفس تصميم الموبايل على الديسكتوب مع تحكمات مختلفة */
+
+/* Desktop Photo Gallery Section */
+.news-ticker-section {
+    background: linear-gradient(135deg, rgb(30, 34, 45), rgb(44, 47, 58));
+    padding: 3rem 2rem;
+    margin: 2rem auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(200, 168, 124, 0.3);
+    min-height: 500px;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    z-index: 10;
+    backdrop-filter: blur(2px);
+}
+
+.ticker-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #8C6B46;
+    margin-bottom: 35px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+    background: linear-gradient(135deg, #C8A87C, #8C6B46);
+    -webkit-background-clip: text;
+    /* -webkit-text-fill-color: transparent; */
+    background-clip: text;
+    letter-spacing: 1px;
+}
+
+.ticker-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    min-height: 350px;
+}
+
+.ticker-container {
+    overflow: hidden;
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    background: transparent;
+    cursor: default;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    height: 350px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.ticker-container:active {
+    cursor: default;
+}
+
+.ticker-content {
+    display: flex;
+    gap: 20px;
+    will-change: transform;
+    padding: 20px;
+}
+
+.ticker-item {
+    flex: 0 0 auto;
+    width: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    background: white;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 3px solid rgba(200, 168, 124, 0.3);
+}
+
+.ticker-item:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    border-color: rgba(200, 168, 124, 0.6);
+}
+
+.ticker-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.ticker-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Desktop Control Buttons - تحكمات مختلفة للديسكتوب */
+.control-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #C8A87C, #8C6B46);
+    border: none;
+    padding: 15px 18px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    z-index: 10;
+    color: white;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn:hover {
+    background: linear-gradient(135deg, #8C6B46, #C8A87C);
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+}
+
+.control-left { 
+    left: 15px; 
+}
+
+.control-right { 
+    right: 15px; 
+}
+
+/* Desktop Photo Gallery Navigation Dots */
+.photo-gallery-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.photo-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(200, 168, 124, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.photo-dot:hover {
+    background: rgba(200, 168, 124, 0.7);
+    transform: scale(1.2);
+}
+
+.photo-dot.active {
+    background: linear-gradient(135deg, #C8A87C, #8C6B46);
+    transform: scale(1.3);
+    box-shadow: 0 4px 12px rgba(200, 168, 124, 0.4);
+}
+
+/* Desktop Photo Gallery Thumbnails */
+.photo-gallery-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.photo-thumbnail {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    opacity: 0.7;
+}
+
+.photo-thumbnail:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    border-color: rgba(200, 168, 124, 0.5);
+}
+
+.photo-thumbnail.active {
+    border-color: #C8A87C;
+    opacity: 1;
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px rgba(200, 168, 124, 0.4);
+}
+
+.photo-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Desktop Photo Gallery Fullscreen Button */
+.photo-fullscreen-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    z-index: 15;
+    backdrop-filter: blur(2px);
+}
+
+.photo-fullscreen-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+/* Desktop Photo Gallery Auto-play Controls */
+.photo-autoplay-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.autoplay-toggle {
+    background: linear-gradient(135deg, #C8A87C, #8C6B46);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.autoplay-toggle:hover {
+    background: linear-gradient(135deg, #8C6B46, #C8A87C);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(200, 168, 124, 0.3);
+}
+
+.autoplay-toggle.active {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+}
+
+.speed-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #8C6B46;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.speed-slider {
+    width: 100px;
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(200, 168, 124, 0.3);
+    outline: none;
+    cursor: pointer;
+}
+
+.speed-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #C8A87C, #8C6B46);
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.speed-slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #C8A87C, #8C6B46);
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Swiper Styles للشاشات الكبيرة */
+.content--intro {
+    padding: 60px 0;
+    background:linear-gradient(135deg, rgb(30, 34, 45), rgb(44, 47, 58));
+}
+
+.mySwiper {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+.swiper-slide {
+ 
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* SingleCard Styles للشاشات الكبيرة */
+.SingleCard {
+    background:linear-gradient(135deg, rgb(200, 168, 124), rgb(140, 107, 70));
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #e9ecef;
+}
+
+.SingleCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.SingleCard_icon {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    width: 80px;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.SingleCard_cardTitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.SingleCard_cardDesc {
+    color: #ffffff;
+    line-height: 1.6;
+    text-align: center;
+    font-size: 0.95rem;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+/* Swiper Navigation للشاشات الكبيرة */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #667eea;
+    background: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: #667eea;
+    color: white;
+    transform: scale(1.1);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Swiper Pagination للشاشات الكبيرة */
+.swiper-pagination {
+    position: relative;
+    margin-top: 2rem;
+}
+
+.swiper-pagination-bullet {
+    background: #ddd;
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background: #667eea;
+    transform: scale(1.2);
+}
+
+/* Responsive Swiper للشاشات الكبيرة */
+@media (min-width: 1200px) {
+    .swiper-slide {
+        width: 300px !important;
+    }
+    
+    .SingleCard {
+        padding: 2.5rem;
+    }
+    
+    .SingleCard_icon {
+        font-size: 3.5rem;
+        width: 90px;
+        height: 90px;
+    }
+    
+    .SingleCard_cardTitle {
+        font-size: 1.375rem;
+    }
+    
+    .SingleCard_cardDesc {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .swiper-slide {
+        width: 350px !important;
+    }
+    
+    .SingleCard {
+        padding: 3rem;
+    }
+    
+    .SingleCard_icon {
+        font-size: 4rem;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Animation للشاشات الكبيرة */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.swiper-slide {
+    animation: slideInUp 0.6s ease-out;
+}
+
+.swiper-slide:nth-child(1) { animation-delay: 0.1s; }
+.swiper-slide:nth-child(2) { animation-delay: 0.2s; }
+.swiper-slide:nth-child(3) { animation-delay: 0.3s; }
+.swiper-slide:nth-child(4) { animation-delay: 0.4s; }
+.swiper-slide:nth-child(5) { animation-delay: 0.5s; }
+.swiper-slide:nth-child(6) { animation-delay: 0.6s; }
+
+/* Desktop Corporate Package Styles */
+.desktop-corporate-package {
+    background: linear-gradient(135deg, #C8A87C, #8C6B46);
+        box-shadow: 0 4px 15px rgba(200, 168, 124, 0.3);
+    border: 3px solid #C8A87C;
+
+    color: white;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.desktop-corporate-package h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.desktop-corporate-package p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    text-align: right;
+}
+
+/* Desktop Cards Container */
+.desktop-cards-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    flex-wrap: wrap;
+}
+
+/* Desktop Flip Card Styles */
+.desktop-cards-container .flip-card {
+    display: block;
+    width: 250px;
+    height: 320px;
+    perspective: 1200px;
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.desktop-cards-container .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.desktop-cards-container .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.desktop-cards-container .flip-card-front,
+.desktop-cards-container .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.desktop-cards-container .flip-card-front {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background: #000;
+    color: #fff;
+}
+
+.desktop-cards-container .flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.desktop-cards-container .flip-card-front h4 {
+    margin: -50px 0 25px 0;
+    font-size: 18px;
+    background: rgba(0,0,0,0.7);
+    padding: 8px 16px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 25px;
+}
+
+.desktop-cards-container .flip-card-back {
+    background: linear-gradient(135deg, #C8A87C, #8C6B46);
+    color: white;
+    transform: rotateY(180deg);
+    flex-direction: column;
+    padding: 25px 20px;
+    justify-content: center;
+    text-align: right;
+}
+
+.desktop-cards-container .flip-card-back h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.desktop-cards-container .flip-card-back p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Desktop Floating Icons */
+.desktop-cards-container .floating-icon {
+    position: absolute;
+    font-size: 28px;
+    color: #C8A87C;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.desktop-cards-container .icon1 { top: 15%; left: -30px; }
+.desktop-cards-container .icon2 { top: 50%; right: -30px; }
+.desktop-cards-container .icon3 { bottom: 15%; left: 40%; }
+.desktop-cards-container .icon4 { top: -20px; left: 60%; }
+
+.desktop-cards-container .floating-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Desktop Animation */
+.desktop-cards-container .flip-card.animate-icons .floating-icon {
+    animation: floatOut 1.2s ease forwards;
+}
+
+@keyframes floatOut {
+    0% { transform: scale(0.5) translateY(0); opacity: 0; }
+    30% { opacity: 1; }
+    70% { transform: scale(1.3) translateY(-50px); opacity: 1; }
+    100% { transform: scale(1) translateY(-80px); opacity: 0; }
+}
+
+/* Desktop Hover Effects */
+.desktop-cards-container .flip-card:hover .flip-card-inner {
+    box-shadow: 0 20px 45px rgba(0,0,0,0.3);
+    transform: translateY(-5px);
+}
+
+.desktop-cards-container .flip-card:hover {
+    transform: scale(1.02);
+}
+
+/* Enhanced Desktop Click Response */
+.desktop-cards-container .flip-card:active {
+    transform: scale(0.98);
+}
+
+.desktop-cards-container .flip-card:active .flip-card-inner {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* ===== DESKTOP APARTMENT SLIDER STYLES ===== */
+
+/* Desktop Apartment Slider Container */
+.desktop-apartment-slider {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+/* Desktop Apartment Slider */
+.desktop-apartment-slider .apartment-slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #1E222D, #2C2F3A);
+    display: block;
+}
+
+/* Desktop Slider Slides */
+.desktop-apartment-slider .slider-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    will-change: transform, opacity;
+}
+
+.desktop-apartment-slider .slider-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.desktop-apartment-slider .slider-slide.prev {
+    transform: translateX(-100%);
+}
+
+/* Desktop Slider Images - Full Background */
+.desktop-apartment-slider .slider-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    will-change: opacity;
+}
+
+/* Desktop Slider Content - Separate Card */
+.desktop-apartment-slider .slider-content {
+    position: relative;
+    background: linear-gradient(135deg, #C8A87C, #8C6B46);
+    padding: 1.5rem;
+    border-radius: 12px;
+    color: white;
+    width: 100%;
+    max-width: 400px;
+    margin: 1rem auto 0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    z-index: 3;
+    pointer-events: auto;
+    top: 0;
+    left: 0;
+}
+
+.desktop-apartment-slider .slider-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: #fff;
+    text-align: center;
+}
+
+.desktop-apartment-slider .slider-desc {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/* Desktop Slider Controls */
+.desktop-slider-controls {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    display: flex;
+    align-items: center;
+    gap: 30rem;
+
+    z-index: 10;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.desktop-slider-btn {
+    background: linear-gradient(135deg, #C8A87C, #8C6B46);
+    border: none;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.desktop-slider-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.desktop-slider-btn:active {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(0.95);
+}
+
+/* Desktop Slider Content Container */
+.desktop-slider-content-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 500px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.desktop-slider-content-container .slider-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    background: linear-gradient(135deg, #1E222D, #2C2F3A);
+    backdrop-filter: blur(15px);
+    padding: 2rem;
+    border-radius: 16px;
+    color: white;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.desktop-slider-content-container .slider-content.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+/* Specific styling for section headings - آراء العملاء and الأسئلة الشائعة */
+.reviews-section,
+.faq-section {
+    text-align: center;
+}
+
+.reviews-section h1,
+.faq-section h1 {background: linear-gradient(135deg, #C8A87C, #8C6B46);
+    box-shadow: 0 4px 15px rgba(200, 168, 124, 0.3);
+border: 3px solid #C8A87C;
+
+    text-align: center;
+    margin: 2rem auto;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    /* border: 3px solid #C8A87C; */
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    /* background: linear-gradient(135deg, rgba(200, 168, 124, 0.1), rgba(140, 107, 70, 0.1));
+    box-shadow: 0 4px 15px rgba(200, 168, 124, 0.3); */
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Desktop Reviews Section - RTL for Arabic */
+.desktop-reviews {
+    direction: rtl;
+    text-align: right;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.desktop-reviews .review-card {
+    background: linear-gradient(135deg, #C8A87C, #8C6B46);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    color: white;
+    text-align: right;
+    direction: rtl;
+}
+
+.desktop-reviews .review-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.desktop-reviews .review-content {
+    text-align: right;
+    direction: rtl;
+}
+
+.desktop-reviews .review-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+    text-align: right;
+    direction: rtl;
+    margin-bottom: 1.5rem;
+}
+
+.desktop-reviews .review-author {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    text-align: right;
+    direction: rtl;
+}
+
+.desktop-reviews .author-info {
+    text-align: right;
+    direction: rtl;
+}
+
+.desktop-reviews .author-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    margin: 0 0 0.25rem 0;
+    text-align: right;
+}
+
+.desktop-reviews .author-title {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    text-align: right;
+}
+
+.desktop-reviews .author-avatar {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.desktop-reviews .review-rating {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.desktop-reviews .stars {
+    font-size: 1.2rem;
+    text-align: right;
+}
+
+.desktop-slider-content-container .slider-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.desktop-slider-content-container .slider-desc {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.desktop-slider-content-container .slider-directions-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #C8A87C, #8C6B46);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.desktop-slider-content-container .slider-directions-btn:hover {
+    background: linear-gradient(135deg, #4a7c59, #2c5530);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.desktop-slider-content-container .slider-directions-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Desktop Slider Info */
+.desktop-slider-info {
+    /* position: absolute; */
+    top: 2rem;
+    left: 2rem;
+    right: 2rem;
+
+    background: linear-gradient(135deg, #C8A87C, #8C6B46);
+    backdrop-filter: blur(15px);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    z-index: 10;
+    background: linear-gradient(135deg, #C8A87C, #8C6B46);
+    box-shadow: 0 4px 15px rgba(200, 168, 124, 0.3);
+border: 3px solid #C8A87C;
+
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.desktop-apartment-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 0.5rem 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.desktop-apartment-price {
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Desktop City Guide Button Styles */
+.desktop-apartment-price.city-guide-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+}
+
+.desktop-apartment-price.city-guide-btn:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Desktop Slider Directions Button */
+.desktop-apartment-slider .slider-directions-btn {
+    display: inline-block;
+    background:linear-gradient(135deg, #C8A87C, #8C6B46);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.desktop-apartment-slider .slider-directions-btn:hover {
+    background: linear-gradient(135deg, #C8A87C, #8C6B46);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.desktop-apartment-slider .slider-directions-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Desktop Slider Animations */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutLeft {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+.desktop-apartment-slider .slider-slide.slide-in {
+    animation: slideInRight 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.desktop-apartment-slider .slider-slide.slide-out {
+    animation: slideOutLeft 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.desktop-apartment-slider .slider-slide.slide-in-left {
+    animation: slideInLeft 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.desktop-apartment-slider .slider-slide.slide-out-right {
+    animation: slideOutRight 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* لابتوب صغير (1024px - 1280px) */
+@media (min-width: 1024px) and (max-width: 1280px) {
+    body {
+        font-size: 14px;
+    }
+    
+    /* Desktop Photo Gallery - لابتوب صغير */
+    .news-ticker-section {
+        background: linear-gradient(135deg, rgb(30, 34, 45), rgb(44, 47, 58));
+        padding: 2.5rem 1.5rem;
+        margin: 1.5rem auto;
+        border-radius: 18px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        border: 2px solid rgba(200, 168, 124, 0.3);
+        min-height: 400px;
+        width: 100%;
+        max-width: 1000px;
+        position: relative;
+        z-index: 10;
+    }
+    
+    .ticker-title {
+        font-size: 1.8rem;
+        color: #8C6B46;
+        margin-bottom: 25px;
+        font-weight: 700;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.12);
+        text-align: center;
+        background: white;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: white;
+        background-clip: text;
+        letter-spacing: 0.5px;
+    }
+    
+    .ticker-wrapper {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        backdrop-filter: blur(3px);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        min-height: 280px;
+    }
+    
+    .ticker-container {
+        overflow: hidden;
+        width: 100%;
+        border: none;
+        border-radius: 12px;
+        background: transparent;
+        cursor: default;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+        height: 280px;
+    }
+    
+    .ticker-container:active {
+        cursor: default;
+    }
+    
+    .ticker-content {
+        display: flex;
+        gap: 15px;
+        will-change: transform;
+        padding: 15px;
+    }
+    
+    .ticker-item {
+        flex: 0 0 auto;
+        width: 320px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        background: white;
+        text-align: center;
+        transition: all 0.3s ease;
+        border: 2px solid rgba(200, 168, 124, 0.25);
+    }
+    
+    .ticker-item:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        border-color: rgba(200, 168, 124, 0.5);
+    }
+    
+    .ticker-item img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        display: block;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+    
+    .ticker-item:hover img {
+        transform: scale(1.05);
+    }
+    
+    /* Desktop Control Buttons - لابتوب صغير */
+    .control-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: linear-gradient(135deg, #C8A87C, #8C6B46);
+        border: none;
+        padding: 12px 15px;
+        font-size: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        z-index: 10;
+        color: white;
+        transition: all 0.3s ease;
+        font-weight: bold;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .control-btn:hover {
+        background: linear-gradient(135deg, #8C6B46, #C8A87C);
+        transform: translateY(-50%) scale(1.1);
+        box-shadow: 0 7px 18px rgba(0,0,0,0.3);
+    }
+    
+    .control-left { 
+        left: 10px; 
+    }
+    
+    .control-right { 
+        right: 10px; 
+    }
+    
+    /* Desktop Photo Gallery Controls - لابتوب صغير */
+    .photo-gallery-dots {
+        margin-top: 15px;
+        gap: 8px;
+    }
+    
+    .photo-dot {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .photo-gallery-thumbnails {
+        margin-top: 12px;
+        gap: 6px;
+    }
+    
+    .photo-thumbnail {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .photo-fullscreen-btn {
+        top: 15px;
+        right: 15px;
+        padding: 8px 10px;
+        font-size: 16px;
+    }
+    
+    .photo-autoplay-controls {
+        margin-top: 15px;
+        gap: 12px;
+    }
+    
+    .autoplay-toggle {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
+    .speed-control {
+        font-size: 12px;
+    }
+    
+    .speed-slider {
+        width: 80px;
+    }
+    
+    /* Desktop Corporate Package - لابتوب صغير */
+    .desktop-corporate-package {
+        display: block;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+    
+    .desktop-corporate-package h3 {
+        font-size: 1.3rem;
+    }
+    
+    .desktop-corporate-package p {
+        font-size: 0.9rem;
+    }
+    
+    /* Desktop Cards Container - لابتوب صغير */
+    .desktop-cards-container {
+        display: flex;
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+    }
+    
+    .desktop-cards-container .flip-card {
+        width: 220px;
+        height: 280px;
+    }
+    
+    .desktop-cards-container .flip-card-back {
+        padding: 20px 15px;
+    }
+    
+    .desktop-cards-container .flip-card-back h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    .desktop-cards-container .flip-card-back p {
+        font-size: 13px;
+    }
+    
+    .desktop-cards-container .flip-card-front h4 {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+    
+    /* Desktop Apartment Slider - لابتوب صغير */
+    .desktop-apartment-slider {
+        padding: 1.5rem;
+    }
+    
+    .desktop-apartment-slider .apartment-slider {
+        max-width: 600px;
+        height: 400px;
+    }
+    
+    .desktop-apartment-slider .slider-content {
+        padding: 1.2rem;
+        max-width: 350px;
+        margin: 0.8rem auto 0;
+    }
+    
+    .desktop-apartment-slider .slider-title {
+        font-size: 1.2rem;
+    }
+    
+    .desktop-apartment-slider .slider-desc {
+        font-size: 0.9rem;
+    }
+    
+    .desktop-apartment-slider .slider-directions-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .desktop-slider-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+    
+    .desktop-apartment-title {
+        font-size: 1.5rem;
+    }
+    
+    .desktop-apartment-price {
+        font-size: 1rem;
+    }
+    
+    .desktop-slider-info {
+        max-width: 250px;
+        padding: 1.2rem;
+    }
+    
+    /* Hide mobile elements on desktop */
+    .mobile-corporate-package {
+        display: none !important;
+    }
+    
+    .mobile-cards-container {
+        display: none !important;
+    }
+    
+    /* Hide mobile reviews and FAQ on desktop */
+    .mobile-reviews-container {
+        display: none !important;
+    }
+    
+    .mobile-faq-container {
+        display: none !important;
+    }
+}
+
+/* لابتوب متوسط (1281px - 1440px) */
+@media (min-width: 1281px) and (max-width: 1440px) {
+    body {
+        font-size: 16px;
+    }
+    
+    /* Desktop Photo Gallery - لابتوب متوسط */
+    .news-ticker-section {
+        background: linear-gradient(135deg, rgb(30, 34, 45), rgb(44, 47, 58));
+        padding: 3.5rem 2.5rem;
+        margin: 2.5rem auto;
+        border-radius: 22px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+        border: 3px solid rgba(200, 168, 124, 0.4);
+        min-height: 450px;
+        width: 100%;
+        max-width: 1418px;
+        position: relative;
+        z-index: 10;
+        backdrop-filter: blur(3px);
+    }
+    
+    .ticker-title {
+        font-size: 2.2rem;
+        color: #8C6B46;
+        margin-bottom: 30px;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+        text-align: center;
+        background: white;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: white;
+        background-clip: text;
+        letter-spacing: 1px;
+    }
+    
+    .ticker-wrapper {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 18px;
+        backdrop-filter: blur(4px);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        min-height: 320px;
+    }
+    
+    .ticker-container {
+        overflow: hidden;
+        width: 100%;
+        border: none;
+        border-radius: 18px;
+        background: transparent;
+        cursor: default;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        height: 320px;
+    }
+    
+    .ticker-container:active {
+        cursor: default;
+    }
+    
+    .ticker-content {
+        display: flex;
+        gap: 22px;
+        will-change: transform;
+        padding: 22px;
+    }
+    
+    .ticker-item {
+        flex: 0 0 auto;
+        width: 380px;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        background: white;
+        text-align: center;
+        transition: all 0.3s ease;
+        border: 3px solid rgba(200, 168, 124, 0.3);
+    }
+    
+    .ticker-item:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+        border-color: rgba(200, 168, 124, 0.6);
+    }
+    
+    .ticker-item img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        display: block;
+        border-radius: 12px;
+        transition: transform 0.3s ease;
+    }
+    
+    .ticker-item:hover img {
+        transform: scale(1.05);
+    }
+    
+    /* Desktop Control Buttons - لابتوب متوسط */
+    .control-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: linear-gradient(135deg, #C8A87C, #8C6B46);
+        border: none;
+        padding: 15px 18px;
+        font-size: 24px;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+        z-index: 10;
+        color: white;
+        transition: all 0.3s ease;
+        font-weight: bold;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .control-btn:hover {
+        background: linear-gradient(135deg, #8C6B46, #C8A87C);
+        transform: translateY(-50%) scale(1.15);
+        box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+    }
+    
+    .control-left { 
+        left: 15px; 
+    }
+    
+    .control-right { 
+        right: 15px; 
+    }
+    
+    /* Desktop Photo Gallery Controls - لابتوب متوسط */
+    .photo-gallery-dots {
+        margin-top: 18px;
+        gap: 10px;
+    }
+    
+    .photo-dot {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .photo-gallery-thumbnails {
+        margin-top: 15px;
+        gap: 8px;
+    }
+    
+    .photo-thumbnail {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .photo-fullscreen-btn {
+        top: 18px;
+        right: 18px;
+        padding: 9px 11px;
+        font-size: 17px;
+    }
+    
+    .photo-autoplay-controls {
+        margin-top: 18px;
+        gap: 15px;
+    }
+    
+    .autoplay-toggle {
+        padding: 7px 14px;
+        font-size: 13px;
+    }
+    
+    .speed-control {
+        font-size: 13px;
+    }
+    
+    .speed-slider {
+        width: 90px;
+    }
+    
+    /* Desktop Corporate Package - لابتوب متوسط */
+    .desktop-corporate-package {
+        display: block;
+        padding: 2rem;
+        margin: 2rem 0;
+    }
+    
+    .desktop-corporate-package h3 {
+        font-size: 1.5rem;
+    }
+    
+    .desktop-corporate-package p {
+        font-size: 1rem;
+    }
+    
+    /* Desktop Cards Container - لابتوب متوسط */
+    .desktop-cards-container {
+        display: flex;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+    
+    .desktop-cards-container .flip-card {
+        width: 250px;
+        height: 320px;
+    }
+    
+    .desktop-cards-container .flip-card-back {
+        padding: 25px 20px;
+    }
+    
+    .desktop-cards-container .flip-card-back h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .desktop-cards-container .flip-card-back p {
+        font-size: 14px;
+    }
+    
+    .desktop-cards-container .flip-card-front h4 {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+    
+    /* Desktop Apartment Slider - لابتوب متوسط */
+    .desktop-apartment-slider {
+        padding: 2rem;
+    }
+    
+    .desktop-apartment-slider .apartment-slider {
+        max-width: 700px;
+        height: 450px;
+    }
+    
+    .desktop-apartment-slider .slider-content {
+        padding: 1.5rem;
+        max-width  : 500px;
+        margin: 1rem auto 0;
+    }
+    
+    .desktop-apartment-slider .slider-title {
+        font-size: 1.4rem;
+    }
+    
+    .desktop-apartment-slider .slider-desc {
+        font-size: 1rem;
+    }
+    
+    .desktop-apartment-slider .slider-directions-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .desktop-slider-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .desktop-apartment-title {
+        font-size: 1.8rem;
+    }
+    
+    .desktop-apartment-price {
+        font-size: 1.1rem;
+    }
+    
+    .desktop-slider-info {
+        max-width: 459px;
+        padding: 1.5rem;
+    }
+    
+    /* Hide mobile elements on desktop */
+    .mobile-corporate-package {
+        display: none !important;
+    }
+    
+    .mobile-cards-container {
+        display: none !important;
+    }
+    
+    /* Hide mobile reviews and FAQ on desktop */
+    .mobile-reviews-container {
+        display: none !important;
+    }
+    
+    .mobile-faq-container {
+        display: none !important;
+    }
+}
+
+/* لابتوب كبير (1441px - 1920px) */
+@media (min-width: 1441px) and (max-width: 1920px) {
+    body {
+        font-size: 18px;
+    }
+    
+    /* Desktop Photo Gallery - لابتوب كبير */
+    .news-ticker-section {
+        background: linear-gradient(135deg, rgb(30, 34, 45), rgb(44, 47, 58));
+        padding: 4rem 3rem;
+        margin: 3rem auto;
+        border-radius: 25px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+        border: 4px solid rgba(200, 168, 124, 0.5);
+        min-height: 500px;
+        width: 100%;
+        max-width: 1300px;
+        position: relative;
+        z-index: 10;
+        backdrop-filter: blur(4px);
+    }
+    
+    .ticker-title {
+        font-size: 2.8rem;
+        color: #8C6B46;
+        margin-bottom: 40px;
+        font-weight: 700;
+        text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+        text-align: center;
+        background: white;
+        -webkit-background-clip: text;
+        /* -webkit-text-fill-color: transparent; */
+        background-clip: text;
+        letter-spacing: 2px;
+    }
+    
+    .ticker-wrapper {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        backdrop-filter: blur(20px);
+        border: 3px solid rgba(255, 255, 255, 0.4);
+        min-height: 380px;
+    }
+    
+    .ticker-container {
+        overflow: hidden;
+        width: 100%;
+        border: none;
+        border-radius: 20px;
+        background: transparent;
+        cursor: default;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        height: 380px;
+    }
+    
+    .ticker-container:active {
+        cursor: default;
+    }
+    
+    .ticker-content {
+        display: flex;
+        gap: 30px;
+        will-change: transform;
+        padding: 30px;
+    }
+    
+    .ticker-item {
+        flex: 0 0 auto;
+        width: 450px;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+        background: white;
+        text-align: center;
+        transition: all 0.4s ease;
+        border: 4px solid rgba(200, 168, 124, 0.4);
+    }
+    
+    .ticker-item:hover {
+        transform: translateY(-12px) scale(1.05);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        border-color: rgba(200, 168, 124, 0.7);
+    }
+    
+    .ticker-item img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        display: block;
+        border-radius: 15px;
+        transition: transform 0.4s ease;
+    }
+    
+    .ticker-item:hover img {
+        transform: scale(1.08);
+    }
+    
+    /* Desktop Control Buttons - لابتوب كبير */
+    .control-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: linear-gradient(135deg, #C8A87C, #8C6B46);
+        border: none;
+        padding: 20px 24px;
+        font-size: 28px;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        z-index: 10;
+        color: white;
+        transition: all 0.4s ease;
+        font-weight: bold;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .control-btn:hover {
+        background: linear-gradient(135deg, #8C6B46, #C8A87C);
+        transform: translateY(-50%) scale(1.2);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    }
+    
+    .control-left { 
+        left: 20px; 
+    }
+    
+    .control-right { 
+        right: 20px; 
+    }
+    
+    /* Desktop Photo Gallery Controls - لابتوب كبير */
+    .photo-gallery-dots {
+        margin-top: 25px;
+        gap: 12px;
+    }
+    
+    .photo-dot {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .photo-gallery-thumbnails {
+        margin-top: 20px;
+        gap: 10px;
+    }
+    
+    .photo-thumbnail {
+        width: 65px;
+        height: 65px;
+    }
+    
+    .photo-fullscreen-btn {
+        top: 25px;
+        right: 25px;
+        padding: 12px 15px;
+        font-size: 20px;
+    }
+    
+    .photo-autoplay-controls {
+        margin-top: 25px;
+        gap: 20px;
+    }
+    
+    .autoplay-toggle {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    
+    .speed-control {
+        font-size: 15px;
+    }
+    
+    .speed-slider {
+        width: 120px;
+    }
+}
+
+/* ===== DESKTOP BOOKING FORM STYLES ===== */
+/* تطبيق نفس ستايل الموبايل على الديسكتوب - للشاشات الأكبر من 768px */
+@media (min-width: 769px) {
+    .mobile-booking-container {
+        background: linear-gradient(135deg, #1E222D, #2C2F3A);
+        border-radius: 24px;
+        padding: 1.5rem;
+        margin: 0;
+        width: 100%;
+        height: 80vh;
+        max-height: 80vh;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(200, 168, 124, 0.2);
+        position: relative;
+        overflow-y: auto;
+        backdrop-filter: blur(2px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    /* Booking Title */
+    .booking-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 0.5rem;
+        position: relative;
+        z-index: 1;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        font-family: "Cairo", sans-serif;
+        direction: rtl;
+        padding: 1rem;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #C8A87C, #8C6B46);
+        box-shadow: 0 4px 15px rgba(200, 168, 124, 0.3);
+        border: 3px solid #C8A87C;
+    }
+
+    /* Booking Subtitle */
+    .booking-subtitle {
+        font-size: 1.1rem;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 2rem;
+        position: relative;
+        z-index: 1;
+        font-weight: 500;
+        direction: rtl;
+    }
+
+    /* Booking Form */
+    .booking-form {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        flex: 1;
+        overflow-y: auto;
+        padding-right: 0.5rem;
+    }
+
+    /* Form Groups */
+    .form-group {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* Form Labels */
+    .form-group label {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 0.5rem;
+        direction: rtl;
+        text-align: right;
+        font-family: "Cairo", sans-serif;
+    }
+
+    /* Form Inputs */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(200, 168, 124, 0.3);
+        border-radius: 12px;
+        padding: 0.8rem 1rem;
+        color: #ffffff;
+        font-size: 0.95rem;
+        font-family: "Cairo", sans-serif;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(2px);
+        direction: rtl;
+        text-align: right;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+        direction: rtl;
+        text-align: right;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: #C8A87C;
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 0 20px rgba(200, 168, 124, 0.3);
+        transform: translateY(-2px);
+    }
+
+    .form-group input:hover,
+    .form-group select:hover,
+    .form-group textarea:hover {
+        border-color: rgba(200, 168, 124, 0.5);
+        background: rgba(255, 255, 255, 0.12);
+    }
+
+    /* Select Styling */
+    .form-group select {
+        cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23C8A87C' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+        background-position: left 1rem center;
+        background-repeat: no-repeat;
+        background-size: 1rem;
+        padding-left: 3rem;
+    }
+
+    .form-group select option {
+        background: #1E222D;
+        color: #ffffff;
+        padding: 0.5rem;
+    }
+
+    /* Textarea Styling */
+    .form-group textarea {
+        resize: vertical;
+        min-height: 80px;
+        line-height: 1.5;
+    }
+
+    /* Submit Button */
+    .booking-submit-btn {
+        background: linear-gradient(135deg, #C8A87C, #8C6B46);
+        color: #ffffff;
+        border: none;
+        border-radius: 16px;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 700;
+        font-family: "Cairo", sans-serif;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+        box-shadow: 0 8px 25px rgba(200, 168, 124, 0.3);
+        position: relative;
+        overflow: hidden;
+        direction: rtl;
+    }
+
+    .booking-submit-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s ease;
+    }
+
+    .booking-submit-btn:hover::before {
+        left: 0;
+    }
+
+    .booking-submit-btn:hover {
+        background: linear-gradient(135deg, #B89A6B, #7A5A3A);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(200, 168, 124, 0.4);
+    }
+
+    .booking-submit-btn:active {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(200, 168, 124, 0.3);
+    }
+
+    .booking-submit-btn .btn-icon {
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
+    }
+
+    .booking-submit-btn:hover .btn-icon {
+        transform: scale(1.1);
+    }
+
+    /* Form Validation Styles */
+    .form-group input:invalid:not(:placeholder-shown),
+    .form-group select:invalid:not([value=""]),
+    .form-group textarea:invalid:not(:placeholder-shown) {
+        border-color: #ffffff;
+        background: linear-gradient(135deg, #C8A87C, #8C6B46);
+    }
+
+    .form-group input:valid:not(:placeholder-shown),
+    .form-group select:valid:not([value=""]),
+    .form-group textarea:valid:not(:placeholder-shown) {
+        border-color: #ffffff;
+        background: linear-gradient(135deg, #C8A87C, #8C6B46);
+    }
+
+    /* Loading State */
+    .booking-submit-btn.loading {
+        pointer-events: none;
+        opacity: 0.7;
+    }
+
+    .booking-submit-btn.loading::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: 2px solid transparent;
+        border-top: 2px solid #ffffff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    /* Success Animation */
+    .booking-form.success .booking-submit-btn {
+        background: linear-gradient(135deg, #C8A87C, #8C6B46);
+        animation: successPulse 0.6s ease;
+    }
+
+    @keyframes successPulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+    } /* End of Desktop Booking Form Styles */
+
+/* ===== DESKTOP FAQ STYLES ===== */
+/* تطبيق نفس ستايل الموبايل على الديسكتوب - للشاشات الأكبر من 768px */
+@media (min-width: 769px) {
+    /* FAQ Section */
+    .faq-section {
+        background: linear-gradient(135deg, #1E222D, #2C2F3A);
+        border-radius: 24px;
+        padding: 2rem;
+        margin: 1rem;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .faq-section h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #ffffff;
+        text-align: center;
+        margin: 0.5rem auto 2rem auto;
+        direction: rtl;
+        background: linear-gradient(135deg, #C8A87C, #8C6B46);
+        box-shadow: 0 4px 15px rgba(200, 168, 124, 0.3);
+        border: 3px solid #C8A87C;
+        border-radius: 15px;
+        padding: 1rem 2rem;
+        position: relative;
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* FAQ Accordion - Modern Dark Design */
+    .faq-accordion {
+        max-width: 100%;
+    }
+
+    .faq-item {
+        border: none;
+        border-radius: 16px;
+        margin-bottom: 1.5rem;
+        overflow: hidden;
+        background: linear-gradient(135deg, #2a2a2a, #3a3a3a);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        color: white;
+    }
+
+    /* Alternate FAQ item colors for variety */
+    .faq-item:nth-child(odd) {
+        background: linear-gradient(135deg, #2a2a2a, #3a3a3a);
+    }
+
+    .faq-item:nth-child(even) {
+        background: linear-gradient(135deg, #C8A87C, #8C6B46);
+    }
+
+    .faq-item:nth-child(3n) {
+        background: linear-gradient(135deg, #1E222D, #2C2F3A);
+    }
+
+    .faq-item:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .faq-question {
+        padding: 1.5rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(135deg, #C8A87C, #8C6B46);
+        transition: all 0.3s ease;
+        user-select: none;
+        color: white;
+    }
+
+    .faq-question:hover {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .faq-question h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin: 0;
+        direction: rtl;
+        text-align: right;
+        flex: 1;
+        padding-right: 1rem;
+        line-height: 1.4;
+    }
+
+    .faq-icon {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #ffffff;
+        transition: all 0.3s ease;
+        min-width: 30px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    .faq-answer p {
+        background: linear-gradient(135deg, #1E222D, #2C2F3A);
+        padding: 0 1.5rem;
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #ffffff;
+        direction: rtl;
+        text-align: right;
+        padding-bottom: 1.5rem;
+    }
+
+    /* Active FAQ Item */
+    .faq-item.active .faq-question {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .faq-item.active .faq-question h3 {
+        color: #ffffff;
+    }
+
+    .faq-item.active .faq-icon {
+        color: #ffffff;
+        transform: rotate(45deg);
+        background: linear-gradient(135deg, #C8A87C, #8C6B46);
+    }
+
+    .faq-item.active .faq-answer {
+        max-height: 300px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+} /* End of Desktop FAQ Styles */
+
+/* لابتوب متوسط (1281px - 1440px) */
+@media (min-width: 1281px) and (max-width: 1440px) {
+    .ticker-wrapper {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 25px;
+        backdrop-filter: blur(20px);
+        border: 3px solid rgba(255, 255, 255, 0.4);
+        min-height: 400px;
+    }
+    
+    .ticker-container {
+        overflow: hidden;
+        width: 100%;
+        border: none;
+        border-radius: 25px;
+        background: transparent;
+        cursor: default;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+    
+    .ticker-container:active {
+        cursor: default;
+    }
+    
+    .ticker-content {
+        display: flex;
+        gap: 30px;
+        will-change: transform;
+        padding: 30px;
+    }
+    
+    .ticker-item {
+        flex: 0 0 auto;
+        width: 500px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+        background: white;
+        text-align: center;
+        transition: all 0.4s ease;
+        border: 4px solid rgba(200, 168, 124, 0.4);
+    }
+    
+    .ticker-item:hover {
+        transform: translateY(-12px) scale(1.05);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        border-color: rgba(200, 168, 124, 0.7);
+    }
+    
+    .ticker-item img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        display: block;
+        border-radius: 16px;
+        transition: transform 0.4s ease;
+    }
+    
+    .ticker-item:hover img {
+        transform: scale(1.1);
+    }
+    
+    /* أزرار التحكم - لابتوب كبير */
+    .control-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: linear-gradient(135deg, #C8A87C, #8C6B46);
+        border: none;
+        padding: 20px 24px;
+        font-size: 28px;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        z-index: 10;
+        color: white;
+        transition: all 0.4s ease;
+        font-weight: bold;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .control-btn:hover {
+        background: linear-gradient(135deg, #8C6B46, #C8A87C);
+        transform: translateY(-50%) scale(1.2);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    }
+    
+    .control-left { 
+        left: 20px; 
+    }
+    
+    .control-right { 
+        right: 20px; 
+    }
+    
+    /* Desktop Corporate Package - لابتوب كبير */
+    .desktop-corporate-package {
+        display: block;
+        padding: 2.5rem;
+        margin: 2.5rem 0;
+    }
+    
+    .desktop-corporate-package h3 {
+        font-size: 1.8rem;
+    }
+    
+    .desktop-corporate-package p {
+        font-size: 1.1rem;
+    }
+    
+    /* Desktop Cards Container - لابتوب كبير */
+    .desktop-cards-container {
+        display: flex;
+        gap: 2.5rem;
+        padding: 2.5rem 0;
+    }
+    
+    .desktop-cards-container .flip-card {
+        width: 280px;
+        height: 360px;
+    }
+    
+    .desktop-cards-container .flip-card-back {
+        padding: 30px 25px;
+    }
+    
+    .desktop-cards-container .flip-card-back h3 {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+    
+    .desktop-cards-container .flip-card-back p {
+        font-size: 15px;
+    }
+    
+    .desktop-cards-container .flip-card-front h4 {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+    
+    /* Desktop Apartment Slider - لابتوب كبير */
+    .desktop-apartment-slider {
+        padding: 2.5rem;
+    }
+    
+    .desktop-apartment-slider .apartment-slider {
+        max-width: 800px;
+        height: 500px;
+    }
+    
+    .desktop-apartment-slider .slider-content {
+        padding: 1.8rem;
+        max-width: 450px;
+        margin: 1.2rem auto 0;
+    }
+    
+    .desktop-apartment-slider .slider-title {
+        font-size: 1.6rem;
+    }
+    
+    .desktop-apartment-slider .slider-desc {
+        font-size: 1.1rem;
+    }
+    
+    .desktop-apartment-slider .slider-directions-btn {
+        padding: 1rem 1.8rem;
+        font-size: 1.1rem;
+    }
+    
+    .desktop-slider-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 1.6rem;
+    }
+    
+    .desktop-apartment-title {
+        font-size: 2rem;
+    }
+    
+    .desktop-apartment-price {
+        font-size: 1.2rem;
+    }
+    
+    .desktop-slider-info {
+        max-width: 580px;
+        padding: 1.8rem;
+    }
+    
+    /* Hide mobile elements on desktop */
+    .mobile-corporate-package {
+        display: none !important;
+    }
+    
+    .mobile-cards-container {
+        display: none !important;
+    }
+    
+    /* Hide mobile reviews and FAQ on desktop */
+    .mobile-reviews-container {
+        display: none !important;
+    }
+    
+    .mobile-faq-container {
+        display: none !important;
+    }
+}
+
+/* شاشات أكبر من 1920px */
+@media (min-width: 1921px) {
+    body {
+        font-size: 20px;
+    }
+    
+    /* Desktop Photo Gallery - شاشات كبيرة جداً */
+    .news-ticker-section {
+        background: linear-gradient(135deg, rgb(30, 34, 45), rgb(44, 47, 58));
+        padding: 6rem 5rem;
+        margin: 5rem auto;
+        border-radius: 35px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+        border: 5px solid rgba(200, 168, 124, 0.6);
+        min-height: 700px;
+        width: 100%;
+        max-width: 1800px;
+        position: relative;
+        z-index: 10;
+        backdrop-filter: blur(20px);
+    }
+    
+    .ticker-title {
+        font-size: 3.2rem;
+        color: #8C6B46;
+        margin-bottom: 50px;
+        font-weight: 700;
+        text-shadow: 4px 4px 8px rgba(0,0,0,0.25);
+        text-align: center;
+        background: white;
+        -webkit-background-clip: text;
+        /* -webkit-text-fill-color: transparent; */
+        background-clip: text;
+        letter-spacing: 2.5px;
+    }
+    
+    .ticker-wrapper {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 30px;
+        backdrop-filter: blur(25px);
+        border: 4px solid rgba(255, 255, 255, 0.5);
+        min-height: 450px;
+    }
+    
+    .ticker-container {
+        overflow: hidden;
+        width: 100%;
+        border: none;
+        border-radius: 30px;
+        background: transparent;
+        cursor: default;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        height: 450px;
+    }
+    
+    .ticker-container:active {
+        cursor: default;
+    }
+    
+    .ticker-content {
+        display: flex;
+        gap: 35px;
+        will-change: transform;
+        padding: 35px;
+    }
+    
+    .ticker-item {
+        flex: 0 0 auto;
+        width: 500px;
+        border-radius: 25px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        background: white;
+        text-align: center;
+        transition: all 0.5s ease;
+        border: 5px solid rgba(200, 168, 124, 0.5);
+    }
+    
+    .ticker-item:hover {
+        transform: translateY(-15px) scale(1.08);
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+        border-color: rgba(200, 168, 124, 0.8);
+    }
+    
+    .ticker-item img {
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+        display: block;
+        border-radius: 20px;
+        transition: transform 0.5s ease;
+    }
+    
+    .ticker-item:hover img {
+        transform: scale(1.12);
+    }
+    
+    /* Desktop Control Buttons - شاشات كبيرة جداً */
+    .control-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: linear-gradient(135deg, #C8A87C, #8C6B46);
+        border: none;
+        padding: 25px 30px;
+        font-size: 32px;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+        z-index: 10;
+        color: white;
+        transition: all 0.5s ease;
+        font-weight: bold;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .control-btn:hover {
+        background: linear-gradient(135deg, #8C6B46, #C8A87C);
+        transform: translateY(-50%) scale(1.25);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.45);
+    }
+    
+    .control-left { 
+        left: 25px; 
+    }
+    
+    .control-right { 
+        right: 25px; 
+    }
+    
+    /* Desktop Photo Gallery Controls - شاشات كبيرة جداً */
+    .photo-gallery-dots {
+        margin-top: 30px;
+        gap: 15px;
+    }
+    
+    .photo-dot {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .photo-gallery-thumbnails {
+        margin-top: 25px;
+        gap: 12px;
+    }
+    
+    .photo-thumbnail {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .photo-fullscreen-btn {
+        top: 30px;
+        right: 30px;
+        padding: 15px 18px;
+        font-size: 22px;
+    }
+    
+    .photo-autoplay-controls {
+        margin-top: 30px;
+        gap: 25px;
+    }
+    
+    .autoplay-toggle {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+    
+    .speed-control {
+        font-size: 16px;
+    }
+    
+    .speed-slider {
+        width: 140px;
+    }
+    
+    /* Desktop Corporate Package - شاشات كبيرة جداً */
+    .desktop-corporate-package {
+        display: block;
+        padding: 3rem;
+        margin: 3rem 0;
+    }
+    
+    .desktop-corporate-package h3 {
+        font-size: 2rem;
+    }
+    
+    .desktop-corporate-package p {
+        font-size: 1.2rem;
+    }
+    
+    /* Desktop Cards Container - شاشات كبيرة جداً */
+    .desktop-cards-container {
+        display: flex;
+        gap: 3rem;
+        padding: 3rem 0;
+    }
+    
+    .desktop-cards-container .flip-card {
+        width: 320px;
+        height: 400px;
+    }
+    
+    .desktop-cards-container .flip-card-back {
+        padding: 35px 30px;
+    }
+    
+    .desktop-cards-container .flip-card-back h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .desktop-cards-container .flip-card-back p {
+        font-size: 16px;
+    }
+    
+    .desktop-cards-container .flip-card-front h4 {
+        font-size: 22px;
+        padding: 12px 24px;
+    }
+    
+    /* Desktop Apartment Slider - شاشات كبيرة جداً */
+    .desktop-apartment-slider {
+        padding: 3rem;
+    }
+    
+    .desktop-apartment-slider .apartment-slider {
+        max-width: 900px;
+        height: 550px;
+    }
+    
+    .desktop-apartment-slider .slider-content {
+        padding: 2rem;
+        max-width: 500px;
+        margin: 1.5rem auto 0;
+    }
+    
+    .desktop-apartment-slider .slider-title {
+        font-size: 1.8rem;
+    }
+    
+    .desktop-apartment-slider .slider-desc {
+        font-size: 1.2rem;
+    }
+    
+    .desktop-apartment-slider .slider-directions-btn {
+        padding: 1.2rem 2rem;
+        font-size: 1.2rem;
+    }
+    
+    .desktop-slider-btn {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+    
+    .desktop-apartment-title {
+        font-size: 2.2rem;
+    }
+    
+    .desktop-apartment-price {
+        font-size: 1.3rem;
+    }
+    
+    .desktop-slider-info {
+        max-width: 350px;
+        padding: 2rem;
+    }
+    
+    /* Hide mobile elements on desktop */
+    .mobile-corporate-package {
+        display: none !important;
+    }
+    
+    .mobile-cards-container {
+        display: none !important;
+    }
+    
+    /* Hide mobile reviews and FAQ on desktop */
+    .mobile-reviews-container {
+        display: none !important;
+    }
+    
+    .mobile-faq-container {
+        display: none !important;
+    }
+}
+
+/* Media Queries للتأكد من أن هذه الستايلات تطبق فقط على الشاشات الأكبر من 768px */
+@media (min-width: 769px) {
+    /* Desktop Corporate Package */
+    .desktop-corporate-package {
+        display: block;
+    }
+    
+    /* Desktop Cards Container */
+    .desktop-cards-container {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+    }
+    
+    /* Desktop Apartment Slider */
+    .desktop-apartment-slider {
+        width: 779px;
+        display: block;
+    }
+    
+    /* Hide mobile elements on desktop */
+    .mobile-corporate-package {
+        display: none !important;
+    }
+    
+    .mobile-cards-container {
+        display: none !important;
+    }
+    
+    .mobile-slider-container {
+        display: none !important;
+    }
+    
+    /* Fix glitch issues for desktop sections */
+    .content--sticky {
+        will-change: transform;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+    }
+    
+    /* Smooth transitions for section changes */
+    .content--sticky.bg-1,
+    .content--sticky.bg-2,
+    .content--sticky.bg-3 {
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    
+    /* Prevent animation conflicts */
+    .ticker-content,
+    .ticker-item {
+        will-change: transform;
+        transform: translateZ(0);
+    }
+    
+    /* Optimize ticker animations for desktop */
+    .ticker-container {
+        will-change: transform;
+        transform: translateZ(0);
+        height: 100%;
+    }
+    
+    /* Fix z-index issues */
+    .content--sticky.bg-1 {
+        z-index: 1;
+    }
+    
+    .content--sticky.bg-2 {
+        z-index: 2;
+    }
+    
+    .content--sticky.bg-3 {
+        z-index: 3;
+    }
+    
+    /* ===== DESKTOP NAVBAR LAYOUT FIX ===== */
+    /* Swap navbar menu positions for large screens */
+    /* nav-menu-left (contains الرئيسية and الشقق) should appear on the right */
+    .navbar .nav-menu-left {
+        order: 3; /* Move to right side */
+        justify-content: flex-end;
+    }
+    
+    /* nav-menu-right (contains دليل اقامتك, آراء عملائنا, احجز معاينه) should appear on the left */
+    .navbar .nav-menu-right {
+        order: 1; /* Move to left side */
+        justify-content: flex-start;
+    }
+    
+    /* Keep logo in center */
+    .navbar .nav-logo {
+        order: 2;
+    }
+}
+
+
+
+.nav-logo {
+    display: flex
+;
+    flex-direction: row;}
+
+/* ===== نسخة منفصلة من CSS للتحكمات الجديدة ===== */
+
+/* Loading Screen - نسخة منفصلة */
+.loading-screen-v2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgb(30, 34, 45), rgb(44, 47, 58));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+    font-family: 'Cairo', sans-serif;
+}
+
+.loading-screen-v2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.loading-screen-v2.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-logo-v2 {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 30px;
+    animation: logoFloat 3s ease-in-out infinite;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.loading-spinner-v2 {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.loading-text-v2 {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    animation: textPulse 2s ease-in-out infinite;
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.loading-subtitle-v2 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    margin-top: 10px;
+    animation: textPulse 2s ease-in-out infinite 0.5s;
+    position: relative;
+    z-index: 2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes logoFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes textPulse {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+/* Social Media Icons Styles - نسخة منفصلة */
+.social-links-v2 {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.social-links-v2 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background: white;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+}
+
+.social-links-v2 a:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.social-links-v2 a svg {
+    transition: all 0.3s ease;
+    width: 32px;
+    height: 32px;
+}
+
+.social-links-v2 a:hover svg {
+    transform: rotate(5deg);
+}
+
+/* WhatsApp - Green */
+.social-links-v2 a[href*="wa.me"] {
+    background: #25D366;
+    border-color: #25D366;
+}
+
+.social-links-v2 a[href*="wa.me"]:hover {
+    background: #128C7E;
+    border-color: #128C7E;
+}
+
+/* Facebook - Blue */
+.social-links-v2 a[href*="facebook.com"] {
+    background: #1877F2;
+    border-color: #1877F2;
+}
+
+.social-links-v2 a[href*="facebook.com"]:hover {
+    background: #166FE5;
+    border-color: #166FE5;
+}
+
+/* Twitter/X - Black */
+.social-links-v2 a[href*="x.com"] {
+    background: #000000;
+    border-color: #000000;
+}
+
+.social-links-v2 a[href*="x.com"]:hover {
+    background: #333333;
+    border-color: #333333;
+}
+
+/* TikTok - Black */
+.social-links-v2 a[href*="tiktok.com"] {
+    background: #000000;
+    border-color: #000000;
+}
+
+.social-links-v2 a[href*="tiktok.com"]:hover {
+    background: #333333;
+    border-color: #333333;
+}
+
+/* Snapchat - Yellow */
+.social-links-v2 a[href*="snapchat.com"] {
+    background: #FFFC00;
+    border-color: #FFFC00;
+    color: #000000;
+}
+
+.social-links-v2 a[href*="snapchat.com"]:hover {
+    background: #E6E600;
+    border-color: #E6E600;
+}
+
+/* Email - Red */
+.social-links-v2 a[href*="mailto"] {
+    background: #EA4335;
+    border-color: #EA4335;
+}
+
+.social-links-v2 a[href*="mailto"]:hover {
+    background: #D33B2C;
+    border-color: #D33B2C;
+}
+
+/* Mobile Social Links Styles - نسخة منفصلة */
+.mobile-social-links-v2 {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.mobile-social-links-v2 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+}
+
+.mobile-social-links-v2 a:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-social-links-v2 a svg {
+    transition: all 0.3s ease;
+    width: 28px;
+    height: 28px;
+}
+
+.mobile-social-links-v2 a:hover svg {
+    transform: rotate(3deg);
+}
+
+/* Mobile WhatsApp - Green */
+.mobile-whatsapp-v2 {
+    background: #25D366 !important;
+    border-color: #25D366 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50% !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1) !important;
+    border: 2px solid #25D366 !important;
+    margin-bottom: 10px !important;
+}
+
+.mobile-whatsapp-v2:hover {
+    background: #128C7E !important;
+    border-color: #128C7E !important;
+    transform: translateY(-2px) scale(1.05) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+.mobile-whatsapp-v2 svg {
+    width: 28px !important;
+    height: 28px !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Mobile Contact Buttons - نسخة منفصلة */
+.mobile-contact-buttons-v2 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 15px 0;
+}
+
+.mobile-call-btn-v2,
+.mobile-contact-btn-v2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #C8A87C, #8C6B46);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(200, 168, 124, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.mobile-call-btn-v2:hover,
+.mobile-contact-btn-v2:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(200, 168, 124, 0.5);
+    background: linear-gradient(135deg, #8C6B46, #C8A87C);
+}
+
+.mobile-call-btn-v2 svg,
+.mobile-contact-btn-v2 svg {
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease;
+}
+
+.mobile-call-btn-v2:hover svg,
+.mobile-contact-btn-v2:hover svg {
+    transform: scale(1.1);
+}
+
+/* WhatsApp specific styling */
+.mobile-call-btn-v2 {
+    background: linear-gradient(135deg, #25D366, #128C7E) !important;
+}
+
+.mobile-call-btn-v2:hover {
+    background: linear-gradient(135deg, #128C7E, #25D366) !important;
+}
+
+/* RTL Text Direction for Mobile Menu - نسخة منفصلة */
+.mobile-menu-content-v2 {
+    direction: rtl;
+    text-align: right;
+}
+
+.mobile-nav-list-v2 {
+    direction: rtl;
+    text-align: right;
+}
+
+.mobile-nav-list-v2 li {
+    text-align: right;
+}
+
+.mobile-nav-list-v2 a {
+    text-align: right;
+    direction: rtl;
+}
+
+.mobile-contact-v2 {
+    direction: rtl;
+    text-align: right;
+}
+
+.mobile-contact-buttons-v2 {
+    direction: rtl;
+}
+
+.mobile-call-btn-v2,
+.mobile-contact-btn-v2 {
+    direction: rtl;
+    text-align: right;
+    flex-direction: row-reverse;
+}
+
+.mobile-call-btn-v2 span,
+.mobile-contact-btn-v2 span {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Mobile Facebook - Blue */
+.mobile-social-links-v2 a[href*="facebook.com"] {
+    background: #1877F2;
+    border-color: #1877F2;
+}
+
+.mobile-social-links-v2 a[href*="facebook.com"]:hover {
+    background: #166FE5;
+    border-color: #166FE5;
+}
+
+/* Mobile Twitter/X - Black */
+.mobile-social-links-v2 a[href*="x.com"] {
+    background: #000000;
+    border-color: #000000;
+}
+
+.mobile-social-links-v2 a[href*="x.com"]:hover {
+    background: #333333;
+    border-color: #333333;
+}
+
+/* Mobile TikTok - Black */
+.mobile-social-links-v2 a[href*="tiktok.com"] {
+    background: #000000;
+    border-color: #000000;
+}
+
+.mobile-social-links-v2 a[href*="tiktok.com"]:hover {
+    background: #333333;
+    border-color: #333333;
+}
+
+/* Mobile Snapchat - Yellow */
+.mobile-social-links-v2 a[href*="snapchat.com"] {
+    background: #FFFC00;
+    border-color: #FFFC00;
+    color: #000000;
+}
+
+.mobile-social-links-v2 a[href*="snapchat.com"]:hover {
+    background: #E6E600;
+    border-color: #E6E600;
+}
+
+/* Responsive adjustments - نسخة منفصلة */
+@media (max-width: 768px) {
+    .social-links-v2 {
+        gap: 12px;
+        justify-content: center;
+    }
+    
+    .social-links-v2 a {
+        width: 63px;
+        height: 64px;
+    }
+}
+
+/* BG-2 Ticker Custom Styles - نسخة منفصلة */
+.bg-2-ticker-v2 {
+    background: -gradient(135deg, rgba(139, 69, 19, 0.9), rgba(160, 82, 45, 0.8));
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.bg-2-title-v2 {
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin-bottom: 25px !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important;
+    color: #FFD700 !important;
+}
+
+.bg-2-wrapper-v2 {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    backdrop-filter: blur(2px);
+    min-height: 200px;
+}
+
+.bg-2-container-v2 {
+    cursor: default;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 37px;
+    height: 227px;
+}
+
+.bg-2-container-v2:active {
+    cursor: default;
+}
+
+.bg-2-content-v2 {
+    display: flex;
+    transition: transform 0.1s ease;
+}
+
+.bg-2-item-v2 {
+    flex-shrink: 0;
+    margin: 0 8px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid rgba(255, 215, 0, 0.3);
+    position: relative;
+    width: 50%;
+    min-width: 200px;
+}
+
+.bg-2-item-v2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    border-color: #FFD700;
+}
+
+.bg-2-item-v2 img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+}
+
+.attraction-item-v2 {
+    position: relative;
+}
+
+.attraction-text-v2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #C8A87C, #8C6B46);
+    color: #ffffff;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    border-bottom: 2px solid #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Mobile adjustments for bg-2 ticker - نسخة منفصلة */
+@media (max-width: 768px) {
+    .bg-2-ticker-v2 {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .bg-2-title-v2 {
+        font-size: .9rem !important;
+        margin-bottom: 20px !important;
+    }
+
+    .bg-2-wrapper-v2 {
+        padding: 12px;
+        min-height: 220px;
+    }
+
+    .bg-2-item-v2 {
+        margin: 0 5px;
+        width: 100%;
+        min-width: 150px;
+    }
+
+    .bg-2-item-v2 img {
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .attraction-text-v2 {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+}
+
+/* Specific adjustments for smaller mobile screens - نسخة منفصلة */
+@media (max-width: 425px) {
+    .bg-2-ticker-v2 {
+        margin: 10px;
+        padding: 12px;
+    }
+
+    .bg-2-title-v2 {
+        font-size: 1.3rem !important;
+        margin-bottom: 15px !important;
+    }
+
+    .bg-2-wrapper-v2 {
+        padding: 25px;
+        min-height: 250px;
+    }
+
+    .bg-2-item-v2 {
+        margin: 0 4px;
+        width: 100%;
+        min-width: 182px;
+    }
+
+    .bg-2-item-v2 img {
+        width: 100%;
+        height: 295px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .attraction-text-v2 {
+        font-size: 0.75rem;
+        padding: 5px 8px;
+    }
+}
+
+@media (max-width: 375px) {
+    .bg-2-ticker-v2 {
+        margin: 8px;
+        padding: 10px;
+    }
+
+    .bg-2-title-v2 {
+        font-size: 1.2rem !important;
+        margin-bottom: 12px !important;
+    }
+
+    .bg-2-wrapper-v2 {
+        padding: 30px;
+        min-height: 280px;
+    }
+
+    .bg-2-item-v2 {
+        margin: 0 3px;
+        width: 70%;
+        min-width: 130px;
+    }
+
+    .bg-2-item-v2 img {
+        height: 120px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .attraction-text-v2 {
+        font-size: 0.7rem;
+        padding: 4px 6px;
+    }
+}
+
+@media (max-width: 320px) {
+    .bg-2-ticker-v2 {
+        margin: 5px;
+        padding: 8px;
+    }
+
+    .bg-2-title-v2 {
+        font-size: 1.1rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .bg-2-wrapper-v2 {
+        padding: 35px;
+        min-height: 300px;
+    }
+
+    .bg-2-item-v2 {
+        margin: 0 2px;
+        width: 100%;
+        min-width: 120px;
+    }
+
+    .bg-2-item-v2 img {
+        height: 230px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .attraction-text-v2 {
+        font-size: 0.65rem;
+        padding: 3px 5px;
+    }
+}
+
+/* ===== قسم التحكمات الجديدة ===== */
+
+/* ===== تحكمات قسم المعالم السياحية للديسكتوب ===== */
+
+/* Desktop City Guide Button Container */
+.city-guide-button-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    padding: 0 2rem;
+}
+
+.city-guide-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #9b7a53;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(200, 168, 124, 0.3);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.city-guide-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.city-guide-button:hover::before {
+    left: 100%;
+}
+
+.city-guide-button:hover {
+    background: linear-gradient(135deg, #8C6B46, #C8A87C);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(200, 168, 124, 0.5);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.city-guide-button:active {
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(200, 168, 124, 0.4);
+}
+
+.button-text {
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.button-icon {
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+}
+
+.city-guide-button:hover .button-icon {
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* City Guide Button Pulse Animation */
+@keyframes cityGuidePulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 6px 20px rgba(200, 168, 124, 0.3);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 8px 25px rgba(200, 168, 124, 0.5);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 6px 20px rgba(200, 168, 124, 0.3);
+    }
+}
+
+.city-guide-button {
+    animation: cityGuidePulse 2s ease-in-out infinite;
+}
+
+/* Desktop Attractions Ticker Section */
+.news-ticker-section.bg-2-ticker {
+    /* background: linear-gradient(135deg, rgba(200, 168, 124, 0.95), rgba(140, 107, 70, 0.9)); */
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin: 3rem auto;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(200, 168, 124, 0.4);
+    backdrop-filter: blur(2px);
+    position: relative;
+    overflow: hidden;
+}
+
+.news-ticker-section.bg-2-ticker::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.ticker-title.bg-2-title {
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6) !important;
+    color: #ffffff !important;
+    position: relative;
+    z-index: 2;
+}
+
+.ticker-wrapper.bg-2-wrapper {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(15px);
+    min-height: 280px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.ticker-container.bg-2-container {
+    cursor: default;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    height: 280px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.ticker-container.bg-2-container:hover {
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ticker-container.bg-2-container:active {
+    cursor: default;
+    transform: scale(0.98);
+}
+
+.ticker-content.bg-2-content {
+    display: flex;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    gap: 15px;
+}
+
+.ticker-item.bg-2-item.attraction-item {
+    flex-shrink: 0;
+    margin: 0 8px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 3px solid rgba(200, 168, 124, 0.4);
+    position: relative;
+    width: 300px;
+    min-width: 300px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.ticker-item.bg-2-item.attraction-item:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    border-color: #C8A87C;
+    z-index: 2;
+}
+
+.ticker-item.bg-2-item.attraction-item img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    min-height: 190px;
+    max-height: 190px;
+}
+
+.ticker-item.bg-2-item.attraction-item:hover img {
+    transform: scale(1.1);
+}
+
+.attraction-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #C8A87C, #8C6B46);
+    color: #ffffff;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    backdrop-filter: blur(2px);
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
+    z-index: 2;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticker-item.bg-2-item.attraction-item:hover .attraction-text {
+    background: linear-gradient(135deg, #8C6B46, #C8A87C);
+    padding: 14px 16px;
+    font-size: 1.05rem;
+}
+
+/* ===== تحكمات الشاشات المختلفة ===== */
+
+/* لابتوب صغير (1024px - 1280px) */
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .city-guide-button-container {
+        margin: 1.5rem 0;
+        padding: 0 1.5rem;
+    }
+    
+    .city-guide-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 25px;
+    }
+    
+    .news-ticker-section.bg-2-ticker {
+        padding: 2rem;
+        margin: 2rem auto;
+        border-radius: 15px;
+    }
+    
+    .ticker-title.bg-2-title {
+        font-size: 1.8rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .ticker-wrapper.bg-2-wrapper {
+        padding: 15px;
+        min-height: 250px;
+    }
+    
+    .ticker-container.bg-2-container {
+        padding: 20px;
+        height: 250px;
+    }
+    
+    .ticker-item.bg-2-item.attraction-item {
+        width: 250px;
+        min-width: 250px;
+        margin: 0 6px;
+        height: 100%;
+    }
+    
+    .ticker-item.bg-2-item.attraction-item img {
+        height: 160px;
+        min-height: 160px;
+        max-height: 160px;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    
+    .attraction-text {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* لابتوب متوسط (1281px - 1440px) */
+@media (min-width: 1281px) and (max-width: 1440px) {
+    .city-guide-button-container {
+        margin: 2rem 0;
+        padding: 0 2rem;
+    }
+    
+    .city-guide-button {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+    
+    .news-ticker-section.bg-2-ticker {
+        padding: 2.5rem;
+        margin: 2.5rem auto;
+        border-radius: 18px;
+    }
+    
+    .ticker-title.bg-2-title {
+        font-size: 2rem !important;
+        margin-bottom: 1.8rem !important;
+    }
+    
+    .ticker-wrapper.bg-2-wrapper {
+        padding: 18px;
+        min-height: 270px;
+    }
+    
+    .ticker-container.bg-2-container {
+        padding: 0px;
+        height: 270px;
+    }
+    
+    .ticker-item.bg-2-item.attraction-item {
+        width: 280px;
+        min-width: 280px;
+        margin: 0 7px;
+        height: 230px;
+    }
+    
+    .ticker-item.bg-2-item.attraction-item img {
+        height: 180px;
+        min-height: 180px;
+        max-height: 437px;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    
+    .attraction-text {
+        padding: 11px 14px;
+        font-size: 0.95rem;
+    }
+}
+
+/* لابتوب كبير (1441px - 1920px) */
+@media (min-width: 1441px) and (max-width: 1920px) {
+    .city-guide-button-container {
+        margin: 2.5rem 0;
+        padding: 0 2.5rem;
+    }
+    
+    .city-guide-button {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.2rem;
+        border-radius: 35px;
+    }
+    
+    .news-ticker-section.bg-2-ticker {
+        padding: 3rem;
+        margin: 3rem auto;
+        border-radius: 25px;
+    }
+    
+    .ticker-title.bg-2-title {
+        font-size: 2.5rem !important;
+        margin-bottom: 2.5rem !important;
+    }
+    
+    .ticker-wrapper.bg-2-wrapper {
+        padding: 25px;
+        min-height: 320px;
+    }
+    
+    .ticker-container.bg-2-container {
+        padding: 0px;
+        height: 100% ;
+    }
+    
+    .ticker-item.bg-2-item.attraction-item {
+        width: 350px;
+        min-width: 350px;
+        margin: 0 10px;
+        height: 270px;
+    }
+    
+    .ticker-item.bg-2-item.attraction-item img {
+        height: 220px;
+        min-height: 100%;
+        max-height: 220px;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    
+    .attraction-text {
+        padding: 14px 18px;
+        font-size: 1.1rem;
+    }
+}
+
+/* شاشات أكبر من 1920px */
+@media (min-width: 1921px) {
+    .city-guide-button-container {
+        margin: 3rem 0;
+        padding: 0 3rem;
+    }
+    
+    .city-guide-button {
+        padding: 1.5rem 3rem;
+        font-size: 1.3rem;
+        border-radius: 40px;
+    }
+    
+    .news-ticker-section.bg-2-ticker {
+        padding: 4rem;
+        margin: 4rem auto;
+        border-radius: 30px;
+    }
+    
+    .ticker-title.bg-2-title {
+        font-size: 3rem !important;
+        margin-bottom: 3rem !important;
+    }
+    
+    .ticker-wrapper.bg-2-wrapper {
+        padding: 30px;
+        min-height: 380px;
+    }
+    
+    .ticker-container.bg-2-container {
+        padding: 35px;
+        height: 380px;
+    }
+    
+    .ticker-item.bg-2-item.attraction-item {
+        width: 400px;
+        min-width: 400px;
+        margin: 0 12px;
+        height: 310px;
+    }
+    
+    .ticker-item.bg-2-item.attraction-item img {
+        height: 260px;
+        min-height: 260px;
+        max-height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    
+    .attraction-text {
+        padding: 16px 20px;
+        font-size: 1.2rem;
+    }
+}
+
+/* ===== تحسينات إضافية للديسكتوب ===== */
+
+/* تأثيرات الحركة المتقدمة */
+@keyframes attractionFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
+
+.ticker-item.bg-2-item.attraction-item:nth-child(odd) {
+    animation: attractionFloat 6s ease-in-out infinite;
+}
+
+.ticker-item.bg-2-item.attraction-item:nth-child(even) {
+    animation: attractionFloat 6s ease-in-out infinite 3s;
+}
+
+/* تأثير التوهج للعناصر - تم إزالة الطبقة العازلة لتحسين وضوح الصور */
+
+/* تحسينات الأداء */
+.ticker-content.bg-2-content {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* تحسينات أزرار الفحص للشاشات الكبيرة */
+@media (min-width: 1201px) and (max-width: 1440px) {
+    .inspection-btn {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    
+    .inspection-btn .btn-text {
+        font-size: 0.4rem !important;
+        line-height: 1.1 !important;
+        white-space: nowrap !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+        max-width: none !important;
+        padding: 2px !important;
+    }
+    
+    .inspection-btn .btn-icon {
+        font-size: 1rem !important;
+    }
+    
+    .inspection-float {
+        bottom: 9rem;
+        right: 2.5rem;
+    }
+    
+    .whatsapp-btn {
+        width: 100px !important;
+        height: 100px !important;
+        animation: whatsapp-pulse 2s ease-in-out infinite;
+    }
+    
+    .whatsapp-btn svg {
+        width: 28px !important;
+        height: 28px !important;
+    }
+    
+    .whatsapp-float {
+        bottom: 2.5rem;
+        right: 2.5rem;
+    }
+}
+
+@media (min-width: 1441px) {
+    .inspection-btn {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    
+    .inspection-btn .btn-text {
+        font-size: 0.35rem !important;
+        line-height: 1.1 !important;
+        white-space: nowrap !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+        max-width: none !important;
+        padding: 2px !important;
+    }
+    
+    .inspection-btn .btn-icon {
+        font-size: 1rem !important;
+    }
+    
+    .inspection-float {
+        bottom: 10rem;
+        right: 3rem;
+    }
+    
+    .whatsapp-btn {
+        width: 100px !important;
+        height: 100px !important;
+        animation: whatsapp-pulse 2s ease-in-out infinite;
+    }
+    
+    .whatsapp-btn svg {
+        width: 32px !important;
+        height: 32px !important;
+    }
+    
+    .whatsapp-float {
+        bottom: 3rem;
+        right: 3rem;
+    }
+}
+
+@media (min-width: 1921px) {
+    .inspection-btn {
+        width: 90px !important;
+        height: 90px !important;
+    }
+    
+    .inspection-btn .btn-text {
+        font-size: 0.3rem !important;
+        line-height: 1.0 !important;
+        white-space: nowrap !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+        max-width: none !important;
+        padding: 1px !important;
+    }
+    
+    .inspection-btn .btn-icon {
+        font-size: 2.2rem !important;
+    }
+    
+    .inspection-float {
+        bottom: 12rem;
+        right: 4rem;
+    }
+    
+    .whatsapp-btn {
+        width: 90px !important;
+        height: 90px !important;
+    }
+    
+    .whatsapp-btn svg {
+        width: 36px !important;
+        height: 36px !important;
+    }
+    
+    .whatsapp-float {
+        bottom: 4rem;
+        right: 4rem;
+    }
+}
+
+.ticker-item.bg-2-item.attraction-item {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* إصلاح مشكلة ظهور الصور */
+.ticker-item.bg-2-item.attraction-item img {
+    background: transparent;
+    border: none;
+    outline: none;
+    opacity: 1 !important;
+    visibility: visible !important;
+    filter: none !important;
+}
+
+.ticker-item.bg-2-item.attraction-item img[src] {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.ticker-item.bg-2-item.attraction-item img:not([src]) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* ضمان ظهور الصور في جميع المتصفحات */
+.ticker-item.bg-2-item.attraction-item img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: auto;
+}
+
+/* تحسينات إضافية للتفاعل */
+.ticker-container.bg-2-container {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.ticker-container.bg-2-container:focus {
+    outline: 2px solid rgba(200, 168, 124, 0.5);
+    outline-offset: 2px;
+}

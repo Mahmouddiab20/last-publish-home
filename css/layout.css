@@ -1,0 +1,406 @@
+/*
+  Layout & Grid System
+  ملف CSS للـ Layout والـ Grid System
+*/
+
+/* ===== FRAME LAYOUT ===== */
+.frame {
+	padding: var(--page-padding);
+	position: relative;
+	display: grid;
+	z-index: 1000;
+	width: 100%;
+	grid-row-gap: 1rem;
+	grid-column-gap: 2rem;
+	justify-items: start;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.frame--header {
+	height: 100%;
+	z-index: 3000;
+	background-size: auto 80%;
+	background-position: 120% 50%;
+	background-repeat: no-repeat;
+	grid-template-areas: 'title' 'prev' 'back' 'sub' 'sponsor' 'demos' 'heading';
+}
+
+.frame--footer {
+	grid-template-areas: 'credits' 'author';
+	align-content: end;
+}
+
+.frame #cdawrap {
+  justify-self: start;
+}
+
+.frame a {
+  pointer-events: auto;
+}
+
+.frame__title {
+  grid-area: title;
+  font-size: inherit;
+  margin: 0;
+}
+
+.frame__back {
+  grid-area: back;
+  justify-self: start;
+}
+
+.frame__prev {
+  grid-area: prev;
+  justify-self: start;
+}
+
+.frame__sub {
+  grid-area: sub;
+}
+
+.frame__demos {
+	grid-area: demos;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	align-self: start;
+	flex-wrap: wrap;
+	background: var(--color-bg);
+	border: 1px solid;
+	padding: 1rem;
+	border-radius: 10px;
+}
+
+.frame__demos > * {
+	width: 2rem;
+	display: block;
+	flex: none;
+	text-decoration: none;
+	border-radius: 50%;
+	aspect-ratio: 1;
+	border: 1px solid var(--color-link-hover);
+	display: grid;
+	place-items: center;
+	padding-top: 0.2em;
+	background: var(--color-bg);
+}
+
+.frame__demos > span {
+	filter: invert(100%);
+}
+
+.frame__demos::before {
+	content: "Variations:";
+}
+
+.frame__heading {
+	grid-area: heading;
+	align-self: center;
+	justify-self: start;
+	width: min-content;
+	display: flex;
+	flex-direction: column;
+	margin-top: 10vh;
+}
+
+.frame__heading h2 {
+	margin: 0;
+	line-height: 0.9;
+	text-transform: uppercase;
+	margin-left: -0.065em;
+	font-size: clamp(2.5rem,12vw,7rem);
+	letter-spacing: -0.105em;
+	font-variation-settings: "slnt" 0, "wdth" 400, "wght" 900, "INKT" 400;
+}
+
+i {
+	font-style: normal;
+	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400, "INKT" 400;
+}
+
+.frame__heading p {
+		margin: 0;
+}
+
+.frame__credits {
+	grid-area: credits;
+}
+
+.frame__author {
+	display: flex;
+	gap: 1.5rem;
+	grid-area: author;
+}
+
+/* ===== CONTENT LAYOUT ===== */
+.content {
+	padding: var(--page-padding);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: rgba(32, 37, 49, 0.8);
+}
+
+.content--perspective {
+	perspective-origin: 50% 0%;
+	perspective: 1000px;
+}
+
+/* ===== STICKY CONTENT LAYOUT ===== */
+.content--sticky {
+	width: 100vw;
+	position: sticky;
+	top: 0;
+	--offset: 0px;
+	top: var(--offset);
+	height: calc(100vh - var(--offset));
+}
+
+.content--sticky-1 {
+	width: 100vw;
+	position: sticky;
+	top: 0;
+	--offset: 0px;
+	top: var(--offset);
+	height: calc(100vh - var(--offset));
+	z-index: 1;
+}
+
+.content--sticky-2 {
+	width: 100vw;
+	position: sticky;
+	top: 0;
+	--offset: 0px;
+	top: var(--offset);
+	height: calc(100vh - var(--offset));
+	z-index: 2;
+}
+
+.content--sticky-3 {
+	width: 100vw;
+	position: sticky;
+	top: 0;
+	--offset: 0px;
+	top: var(--offset);
+	height: calc(100vh - var(--offset));
+	z-index: 3;
+}
+
+.content--sticky-4 {
+	width: 100vw;
+	position: sticky;
+	top: 0;
+	--offset: 0px;
+	top: var(--offset);
+	height: calc(100vh - var(--offset));
+	z-index: 4;
+}
+
+.content--sticky-custom {
+	width: 100vw;
+	position: sticky;
+	top: 0;
+	--offset: 0px;
+	--height: 100vh;
+	top: var(--offset);
+	height: calc(var(--height) - var(--offset));
+}
+
+.content--sticky-offset {
+	width: 100vw;
+	position: sticky;
+	top: 0;
+	--offset: 0px;
+	--top-offset: 0px;
+	top: calc(var(--top-offset) + var(--offset));
+	height: calc(100vh - var(--offset));
+}
+
+/* ===== GRID LAYOUT ===== */
+.content--grid,
+.content--grid .content__inner {
+	display: grid;
+	overflow: hidden;
+	grid-column-gap: 5vw;
+	grid-row-gap: 2vh;
+	align-content: center;
+	grid-template-areas: 'content-img' 'content-title' 'content-text';
+	justify-items: center;
+}
+
+.content--grid:has(.content__inner) {
+	display: block;
+	padding: 0;
+}
+
+.content__inner {
+	width: 100%;
+	height: 100%;
+	border-radius: 0 0 2rem 2rem;
+}
+
+/* ===== CARD LAYOUT ===== */
+.content--card {
+	display: flex;
+	flex-direction: column;
+	height: 80vh;
+	width: 95vw;
+	max-width: 500px;
+	aspect-ratio: 0.8;
+	top: 10vh;
+	margin: auto;
+	border-radius: 14px;
+	gap: 3vh;
+	text-align: center;
+	margin-bottom: 5vh;
+}
+
+.content--card .content__title {
+	font-size: clamp(1.5rem,4vw,3.5rem);
+}
+
+.content--card .content__title i {
+	display: block;
+}
+
+.content--half {
+	display: flex;
+	flex-direction: column;
+	gap: 3vh;
+	text-align: center;
+}
+
+.content--half:nth-child(odd) {
+	margin-left: auto;
+}
+
+.content--intro {
+	padding-top: 5vh;
+    padding-bottom: 11vh;
+	z-index: 2;
+}
+
+.content--outro {
+	padding-top: 0vh;
+	padding-bottom: 0vh;
+}
+
+.spacer {
+	display: none;
+	margin-top: -5vh;
+}
+
+/* ===== BACKGROUND LAYOUT ===== */
+.bg-1 { 
+	background: url('../img/مبنى2.png') center/cover no-repeat;
+	position: relative;
+}
+
+.bg-1::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(166, 124, 82, 0.7);
+	z-index: 1;
+}
+
+.bg-1 > * {
+	position: relative;
+	z-index: 2;
+}
+
+.content--half.bg-1 {
+	background: url('../img/مبنى2.png') center/cover no-repeat;
+	position: relative;
+}
+
+.content--half.bg-1::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(32, 37, 49, 0.8);
+	z-index: 1;
+}
+
+.content--half.bg-1 > * {
+	position: relative;
+	z-index: 2;
+}
+
+.bg-2 { background: rgba(32, 37, 49, 0.8); }
+.bg-3 { background: rgba(32, 37, 49, 0.8) }
+.bg-4 { background: rgba(32, 37, 49, 0.8) }
+.bg-5 { background:rgba(32, 37, 49, 0.8) }
+.bg-6 { background: rgba(32, 37, 49, 0.8) }
+.bg-7 { background: rgba(32, 37, 49) }
+.bg-8 { background: rgba(32, 37, 49) }
+.bg-9 { background: rgba(32, 37, 49) }
+
+/* ===== DESKTOP LAYOUT ===== */
+@media screen and (min-width: 63em) {
+	body {
+		--page-padding: 2rem 3rem;
+	}
+	.frame--header {
+		height: 100vh;
+		grid-template-columns: auto auto auto 1fr 1fr;
+		grid-template-rows: auto 1fr auto;
+		align-content: space-between;
+		grid-template-areas: 'title back prev sub sponsor' 'heading heading heading heading heading' 'demos demos demos demos demos';
+	}
+	.frame__heading {
+		margin-top: 0;
+	}
+	.frame__heading h2 {
+		white-space: nowrap;
+	}
+	.frame__heading p {
+		margin: 0 0 0 auto;
+	}
+	.content--grid .content__title {
+		align-self: end;
+	}
+	.frame__demos {
+		position: fixed;
+		bottom: 2rem;
+	}
+	.frame--footer {
+		padding-bottom: 0;
+		grid-template-areas: 'credits ...' '... author';
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto 6rem;
+	}
+	.frame__author {
+		align-self: center;
+	}
+	.frame #cdawrap {
+		max-width: 300px;
+		text-align: right;
+	}
+	.frame #cdawrap, 
+	.frame__author,
+	.frame__sub {
+		justify-self: end;
+	}
+	.content--grid,
+	.content--grid .content__inner {
+		grid-template-areas: 'content-img content-title' 'content-img content-text';
+		grid-template-columns: 30% 1fr;
+		justify-items: start;
+	}
+	.content--card {
+		width: 50vw;
+	}
+	.content--half {
+		width: 50%;
+	}
+}
+
